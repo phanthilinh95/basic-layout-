@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .total-prosal{
+        width: 100%;
+        height: 140px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .total-prosal-img{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .total-prosal-img img{
+        width: 50px;
+        height: 100px;
+    }
+    .total-prosal-info {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    span.title-sub-prosal{
+        font-size: 14px;
+        color: #aaa;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    span.name-product-prosal{
+        color: #212121;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .stt-prosal{
+        font-size: 14px;
+        color: #aaa;
+    }
+    .stt-note{
+        font-size: 14px;
+        color: red;
+    }
+    .next-node-prosal{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #aaa;
+        font-size: 30px;
+    }
+    .wrap-total-prosal{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #eee;
+    }
+</style>
+<body>
+    <div class="total-prosal">
+        <div class="total-prosal-img">
+            <img src="http://demo.swap-ez.com:1004/products/598a6c24d792791950a00a16_1.jpg" alt="">
+        </div>
+        <div class="wrap-total-prosal">
+            <div class="total-prosal-info">
+                <span class="name-product-prosal">ZenFone 3 8GB Black</span>
+                <span class="title-sub-prosal">User Id : 1234567899</span>
+                <span class="title-sub-prosal">Date: 2018-03-22</span>
+                <span class="title-sub-prosal">Price:  $ 3434</span>
+                <p class="stt-prosal">Status:<span class="stt-note">Accept</span></p>
+            </div>
+            <div class="next-node-prosal"> 
+                    <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

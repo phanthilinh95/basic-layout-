@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu Con mobile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.css">
+    <link rel="stylesheet" href=".//fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .mbs-menu-child{
+        width: 70%;
+        height: 100vh;
+        background-color: #000;
+        padding-top: 20px;
+    }
+    .list-item-menu{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+    }
+    .mbs-icon-menu-hidden{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mbs-icon-menu-hidden i{
+        color: #fff;
+        font-size: 20px;
+    }
+    .mbs-link-action{
+        width: 75%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+    .registation-div{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+    .mbs-link-action a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+    }
+    .mbs-link-action a:hover{
+        color: #ff9800;
+    }
+    .search-frame{
+        width: 80%;
+        height: 50px;
+        border-bottom: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+        position: relative;
+    }
+    .search-frame input {
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        padding-left: 45px;
+    }
+    .search-frame .input-search input[type="search"]{
+        font-size: 15px;
+        font-weight: bold;
+        
+    }
+    .search-frame i {
+        color: #aaa;
+        position: absolute;
+        left: -2px;
+        top: 16px;
+        z-index: 9999;
+        font-size: 21px;
+    }
+    .mbs-child-pur{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+    .mbs-first-pur{
+        width: 23%;
+        height: 100%;
+    }
+    .mbs-second-pur{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+    }
+    .mbs-second-icon{
+        width: 25%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .mbs-second-icon i {
+        color: #fff;
+    }
+    .mbs-second-action{
+        width: 75%;
+        height: 50px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start
+    }
+    .mbs-second-action{
+        color: #fff;
+        font-size: 12px;
+    }
+</style>
+<body>
+    <div class="mbs-menu-child">
+        <div class="list-item-menu">
+            <div class="mbs-icon-menu-hidden">
+                <i class="zmdi zmdi-home"></i>
+            </div>
+            <div class="mbs-link-action">
+                <a href="">Home</a>
+            </div>
+        </div>
+        <div class="list-item-menu">
+            <div class="mbs-icon-menu-hidden">
+                <i class="zmdi zmdi-check-circle" style="color:#ff9800"></i>
+            </div>
+            <div class="mbs-link-action registation-div">
+                <a style="color:#ff9800" href="">Your purpose</a>
+                <i style="color:#ff9800" class="fas fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="mbs-child-pur">
+            <div class="mbs-first-pur">
+
+            </div>
+            <div class="mbs-second-pur">
+                <div class="mbs-second-icon">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <div class="mbs-second-action">
+                    <span>Sale</span>
+                </div>
+            </div>
+        </div>
+        <div class="mbs-child-pur">
+                <div class="mbs-first-pur">
+    
+                </div>
+                <div class="mbs-second-pur">
+                    <div class="mbs-second-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="mbs-second-action">
+                        <span>Buy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mbs-child-pur">
+                    <div class="mbs-first-pur">
+        
+                    </div>
+                    <div class="mbs-second-pur">
+                        <div class="mbs-second-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="mbs-second-action">
+                            <span>Exchange</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+        <div class="list-item-menu">
+            <div class="mbs-icon-menu-hidden">
+                <i class="zmdi zmdi-smartphone-iphone"></i>
+            </div>
+            <div class="mbs-link-action">
+                <a href="">Smart phone</a>
+            </div>
+        </div>
+        <div class="list-item-menu">
+            <div class="mbs-icon-menu-hidden">
+                <i class="zmdi zmdi-tablet-mac"></i>
+            </div>
+            <div class="mbs-link-action">
+                <a href="">Tablet</a>
+            </div>
+        </div>
+        <div class="list-item-menu">
+            <div class="mbs-icon-menu-hidden">
+                <i class="zmdi zmdi-watch"></i>
+            </div>
+            <div class="mbs-link-action">
+                <a href="">Smart watch</a>
+            </div>
+        </div>
+        <div class="list-item-menu">
+            <div class="mbs-icon-menu-hidden">
+                <i class="zmdi zmdi-help"></i>
+            </div>
+            <div class="mbs-link-action">
+                <a href="">Support</a>
+            </div>
+        </div>
+        <div class="list-item-menu">
+            <div class="mbs-icon-menu-hidden">
+                <i class="zmdi zmdi-account-add"></i>
+            </div>
+            <div class="mbs-link-action registation-div">
+                <a href=""> Registation </a>
+                <i style="color:#ff9800" class="zmdi zmdi-star"></i>
+            </div>
+        </div>
+        <div class="list-item-menu">
+            <div class="mbs-icon-menu-hidden">
+                <i class="zmdi zmdi-sign-in"></i>
+            </div>
+            <div class="mbs-link-action">
+                <a href="">Login</a>
+            </div>
+        </div>
+            <div class="search-frame">
+                    <i class="fa fa-search"></i>
+                <div class="input-search">
+                    <input placeholder="Search Swap-ez.com" readonly="readonly" type="search" class="">
+                </div>
+            </div>
+        
+    </div>
+    
+</body>
+</html>

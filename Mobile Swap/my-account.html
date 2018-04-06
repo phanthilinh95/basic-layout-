@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        }
+        .top-my-account{
+            width: 100%;
+            height: 200px;
+            background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+           
+        }
+        .top-my-account:after{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: rgba(57, 128, 128, 0.88);
+            z-index: 1;
+        }
+        .top-my-absolute{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9;
+        }
+        .avatar {
+            width: 90px;
+            height: 90px;
+            
+        }
+        .avatar img{
+            width: 100%;
+            height: 100%;
+            border-radius: 45px;
+        }
+        .email-acc{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .email-acc span{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .device-account{
+            width: 85%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            box-shadow: 1px 1px 1 px solid #eee;
+            position: absolute;
+            bottom: -25px;
+            z-index: 9;
+        }
+        .device-child{
+            width: calc(100% /3);
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .device-child i{
+            color: #aaa;
+            font-size: 18px;
+            position: relative;
+        }
+        .device-child span{
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #aaa;
+            padding-top: 5px;
+
+        }
+        .icon-number{
+            position: absolute;
+            top: -10px;
+            right: -9px;
+        }
+        .icon-number span{
+            padding: 1px 5px;
+            background-color: #ff9800;
+            color: #fff;
+            border-radius: 50%;
+        }
+        .contact-account-wrap{
+            width: 100%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+        }
+        .contact-account{
+            width: 85%;
+            height: 120px;
+            margin-top: 25px;
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .contact-child{
+            display: flex;
+            flex-direction: column;
+            width: calc(100% /4);
+            height: 100%;
+            border: 1px solid #eee;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            
+        }
+        .contact-child:last-child{
+            margin-right: 0px;
+        }
+        .contact-child i {
+            font-size: 14px;
+            color: #aaa;
+        }
+        .contact-private i{
+            color: #000;
+        }
+        .contact-private span{
+            color: #000;
+        }
+        .contact-child span{
+            padding-top: 15px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .sale-sumary-wrap{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .sale-sumary{
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+        }
+        .sale-child{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+        .sale-child span{
+            font-size: 12px;
+            color: #212121;
+        }
+        span.sale-child-private{
+            text-transform: uppercase;
+            color: #ff9800;
+            font-size: 12px;
+        }
+        
+    </style>
+<body>
+    <div class="my-account">
+    <div class="top-my-account">
+        <div class="top-my-absolute">
+            <div class="avatar">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="">
+            </div>
+            <div class="email-acc">
+                <span>phanthilinh95@gmail.com</span>
+            </div>
+        </div>
+        <div class="device-account">
+            <div class="device-child">
+                <i class="fas fa-laptop">
+                    <div class="icon-number">
+                    <span>2</span>
+                    </div>
+                </i>
+                <span>My device</span>
+            </div>
+            <div class="device-child">
+                <i class="fas fa-heart">
+                        <div class="icon-number">
+                            <span>2</span>
+                        </div>
+                </i>
+                <span>My device</span>
+            </div>
+            <div class="device-child">
+                <i class="fas fa-file-alt">
+                    <div class="icon-number">
+                        <span>2</span>
+                    </div>
+                </i>
+
+                <span>My device</span>
+            </div>
+            
+        </div>
+       
+    </div>
+    <div class="contact-account-wrap">
+        <div class="contact-account">
+            <div class="contact-child">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Faceboook</span>
+            </div>
+            <div class="contact-child contact-private">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+            </div>
+            <div class="contact-child">
+                    <i class="fab fa-google-plus-g"></i>
+                    <span>Google</span>
+            </div>
+            <div class="contact-child">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>Linkedin</span>
+            </div>
+        </div>
+    </div>
+    <div class="sale-sumary-wrap">
+        <div class="sale-sumary">
+            <div class="sale-child sale-child-private">
+                <span class="sale-child-private"> Sale sumary</span>
+                <span ><i class="fas fa-sync-alt"></i></span>
+            </div>
+            <div class="sale-child">
+                <span> Today sold </span>
+                <span >23</span>
+            </div>
+            <div class="sale-child">
+                <span> Weekly sales  </span>
+                <span >87</span>
+            </div>
+            <div class="sale-child">
+                <span> Today sold </span>
+                <span >237</span>
+            </div>
+
+        </div>
+    </div>
+</div>    
+</body>
+</html>

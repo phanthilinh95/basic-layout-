@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .mbs-tab-type{
+        width: 100%;
+        height: 40px;
+        box-shadow:  2px 2px 2px 2px #aaa;
+    }
+    
+    
+    .mbs-tab-type ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding-left: 0 !important;
+        margin: 0 !important; 
+    }
+    .mbs-tab-type ul li {
+        display: flex;
+        width: calc(100% /3);
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        text-transform: uppercase;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+    } 
+    .mbs-tab-type ul li:first-child{
+        border-bottom: 3px solid #ff9800;
+        color: #ff9800;
+    }
+    
+</style>
+<body>
+        <div class="mbs-tab-type">
+                <ul>
+                    <li> All </li>
+                    <li> Sale</li>
+                    <li> Exchange</li>
+                </ul>
+            </div>
+    
+</body>
+</html>

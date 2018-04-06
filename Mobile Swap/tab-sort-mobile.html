@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        }
+        .filter-category{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        border-bottom: 1px solid #eee;
+        /*padding-bottom: 10px;*/
+    }
+    .txt-filter{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .icon-filter {
+        padding-right: 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: flex-end;
+    }
+    .icon-filter a{
+        border: 1px solid #eee;
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+        background-color: #FF9800;
+        border-radius: 50%;
+    }
+    .icon {
+        display: flex;
+        flex-direction: row;
+        padding-right: 0;
+    }
+    .icon i {
+        position: relative;
+        color: #fff;
+        font-size: 12px;
+    }
+    .icon a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .txt-filter p, .txt-filter span {
+        font-size: 12px;
+        font-family:'Roboto',sans-serif;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.64);
+    }
+</style>
+<body>
+        <div class="filter-category">
+                <div class="txt-filter ">
+                    <span>Sort by:</span>&nbsp<p>Best match</p>
+                </div>
+                <div class="icon-filter">
+                    <div class="icon">
+                        <a><i class="fa fa-list fa-stack-1x "></i></a>
+                        <a><i class="fas fa-exchange-alt fa-rotate-90 fa-stack-1x"></i></a>
+                        <a><i class="fa fa-filter "></i></a>
+                    </div>
+                </div>
+            </div>
+    
+</body>
+</html>

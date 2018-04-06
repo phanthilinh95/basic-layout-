@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .ticket-otc{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .top-tickets{
+        width: 100%;
+        height: 80px;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: row;
+    }
+    .left-side {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 16px;
+    }
+    .right-side {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+    .left-side span ,.right-side span {
+        font-size: 18px;
+    }
+    td.table-field{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    td.btn-done{
+        color: #0080FF;
+        font-size: 18px;
+    }
+    .table-first{
+        width: 100%;
+        height: 80px;
+        padding-top: 20px;
+        padding-right: 20px;
+        border-bottom: 1px solid #aaa;
+        margin-right: 20px;
+        padding-bottom: 
+    }
+    .table-second{
+        width: 100%;
+        padding: 30px;
+    }
+    .table-second tr td{
+        padding-left: 20px;
+    }
+    .table-second tr td input[type ="text"]{
+        width: 100%;
+        height: 50px;
+        border-radius: 15px;
+        border: none;
+        border: 1px solid #aaa;
+    }
+    .custom-private{
+        font-size: 16px;
+        font-weight: bold;
+        color: #aaa;
+    }
+    .wrap-st{
+        padding-bottom: 100px;
+        padding-right: 20px;
+        height: 400px;
+    }
+    .table-tickets{
+        width: 100%;
+        padding-top: 30px;
+    }
+    .table-tickets tr td {
+        width: 20%;
+        height: 50px;
+        padding-left: 50px;
+        text-align: left;
+        
+    }
+    .custom-field{
+        width: 15%;
+    }
+.menu-fix-bottom{
+        width: 100%;
+        height: 80px;;
+        position: absolute;
+        padding-left: 20%;
+        padding-right: 20%;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #eee;
+    }
+    .menu-fix-bottom img{
+        width: 50px;
+        height: 50px;
+    }
+    .icon-fix{
+        width: 55px;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .icon-fix span {
+        color: #212121;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+    }
+    .color-text{
+        color: #0080FF;
+    }
+</style>
+<body>
+        <div class="ticket-otc">
+                <div class="top-tickets">
+                        <div class="left-side">
+                            <span> Ipsum is simply dummy tmply dummy text of the printing andtypesetting</span>
+                        </div>
+                        <div class="right-side">
+                            <span>Lorem ipsum dolor sit amet, coninting andsectetur adipiscing elit, sed do</span>
+                        </div>
+                </div>
+                <div class="wrap-st">
+                    <table class="table-first">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 95%;" colspan="4" class="table-field">Field Ticket: 2018-03-22 </td>
+                                    <td style="width: 5%;" class="btn-done">Done</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                    <table class="table-second">
+                            <tbody>
+                                <tr style="height: 40px;">
+                                    <td style="width: 50%; height: 23px;" class="custom-private">To:</td>
+                                    <td style="width: 50%; height: 23px;" class="custom-private">From:</td>
+                                </tr>
+                                <tr style="height: 50px;">
+                                    <td style="width: 50%; height: 23px;">
+                                        <input type="text" class="input-one">
+                                    </td>
+                                    <td style="width: 50%; height: 23px;">
+                                        <input type="text" class="input-two">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table-first">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 95%;" colspan="4" class="table-field">Field Ticket Number</td>
+                                        <td style="width: 5%;" class="btn-done">Done</td>
+                                    </tr>
+                                </tbody>
+                        </table>
+                        <table class="table-tickets">
+                                <tbody>
+                                    <tr>
+                                        <td  >Rig Name:</td>
+                                        <td class="color-text">Well</td>
+                                        <td  >Sale Order No:</td>
+                                        <td  >314259</td>
+                                        <td  class="custom-field"  rowspan="5">Contract No: </br> <span class="color-text">JQ13-5666</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td  >Well Name:</td>
+                                        <td class="color-text" >Des</td>
+                                        <td  >Payments Terns:</td>
+                                        <td class="color-text" >Edit</td>
+                                    </tr>
+                                    <tr>
+                                        <td >Ship To:</td>
+                                        <td class="color-text">ship</td>
+                                        <td >Shipping Points:</td>
+                                        <td class="color-text">Edit</td>
+                                    </tr>
+                                    <tr>
+                                        <td >Job Date:</td>
+                                        <td class="color-text">2018-03-27</td>
+                                        <td >Ultimate Destination Country:</td>
+                                        <td class="color-text">Edit</td>
+                                    </tr>
+                                    <tr>
+                                        <td  >Cusst.Po No:</td>
+                                        <td class="color-text" >Edit</td>
+                                        <td  >Customer Account No:</td>
+                                        <td  >142</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                        <div class="menu-fix-bottom">
+                                <div class="icon-fix"> 
+                                    <img src="./images/workflow/info-active.png" alt="">
+                                    <span> Infor</span>
+                                </div>
+                                <div class="icon-fix">
+                                    <img src="./images/workflow/item.png" alt="">
+                                    <span> Item</span>
+                                </div>
+                                <div class="icon-fix"> 
+                                    <img src="./images/workflow/attachment.png" alt="">
+                                    <span> Attachment</span>
+                                </div>
+                                <div class="icon-fix"> 
+                                    <img src="./images/workflow/workflow.png" alt="">
+                                    <span> Workflow</span>
+                                </div>
+                        </div>
+                </div>
+            </div>
+    
+</body>
+<script src=""></script>
+</html>

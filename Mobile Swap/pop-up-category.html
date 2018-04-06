@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./noUiSlider.11.0.3/nouislider.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .pop-up{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .pop-up .title-pop{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pop-up .title-pop span {
+        color: #ff9800;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .pop-up .title-pop i {
+        padding: 2px 5px;
+        border: 1px solid #aaa;
+        color: #aaa;
+        border-radius: 50%;
+    }
+    .btn-done{
+        width: 100%;
+        height: 40px;
+    }
+    .btn-done button{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        background-color: #ff9800;
+        border-radius: 3px;
+        font-weight: bold;
+    }
+    .display-choose{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    .display-choose span {
+        padding: 7px;
+        background-color: #ddd;
+        border-radius: 15px;
+        color: #212121;
+        font-size: 12px;
+        margin: 3px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 3px;
+    }
+    .display-choose span  i {
+        font-size: 14px;
+    }
+    .choose-type{
+        padding-bottom: 30px;
+    }
+    .txt-filter{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+    }
+    .txt-filter p{
+        font-size: 16px;
+        font-family:'Roboto',sans-serif;
+        font-weight: 400;
+        color: #FF9800;
+        text-transform: uppercase;
+        
+    }
+    .button-choose{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding-left: 20px;
+
+    }
+    .button-choose button {
+        width: 100%;
+        height: 40px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #fff;
+    }
+    .button-choose button:first-child{
+        border-bottom: 1px solid #eee;
+        color: #ff9800;
+    }
+    .button-choose button:last-child{
+        border-top: 1px solid #eee;
+    }
+    .mobile-choose{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding-left: 20px;
+    }
+    .mobile-choose button {
+        width: 100%;
+        height: 50px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding-right: 15px;
+    }
+    .mobile-choose button:first-child{
+        border-bottom: 1px solid #eee;
+    }
+    .mobile-choose button:last-child{
+        border-top: 1px solid #eee;
+    }
+
+
+    /*  */
+    #condition-bar, #price-bar{
+        width:100%;
+        margin-left: 0 !important;
+        margin-right: 15px;
+        /* margin-left: 15px; */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .noUi-connect{
+	background-color:  #ff9800 !important;
+    }
+    .noUi-target{
+        width: 95% !important;
+        height: 5px !important;
+    }
+    .noUi-handle{
+        border-radius: 50% !important;
+        background-color: #ff9800 !important;
+        box-shadow:  0 0 0 !important;
+    }
+    .noUi-horizontal .noUi-handle{
+        width: 15px !important;
+        height: 15px !important;
+        top: -7px !important;
+        left: -8px;
+    }
+    .noUi-handle:before, .noUi-handle:after{
+        content: "";
+        display: block;
+        position: absolute;
+        height: 0;
+        width: 0;
+        background: #E8E7E6;
+        left: 0;
+        top: 0;
+    }
+    .noUi-connect{
+        box-shadow:  0 0 0 !important;
+    }
+    /**/
+    .li-color, .li-color ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .li-color ul li {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 5px;
+        margin-bottom: 20px;
+        list-style-type: none;
+    }
+    li.li-1 {
+        background-color: rgba(0, 0, 0, 0.37);
+        border: 1px solid rgba(0, 0, 0, 0.37);;
+    }
+    li.li-2{
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #aaa;
+    }
+    li.li-3{
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(0, 0, 0);
+    }
+    li.li-4{
+        background-color: rgb(52, 61, 70);
+        border: 1px solid rgb(52, 61, 70);
+    }
+    li.li-5{
+        background-color: rgb(192, 192, 192);
+        border: 1px solid rgb(192, 192, 192);
+    }
+    li.li-6{
+        background-color: rgb(110, 127, 128); 
+        border: 1px solid rgb(110, 127, 128); 
+    }
+    li.li-7{
+        background-color: rgb(110, 127, 128); 
+        border: 1px solid rgb(110, 127, 128); 
+    }
+    li.li-8 {
+        background-color: rgb(104, 104, 107); 
+        border: 1px solid rgb(104, 104, 107); 
+    }
+    li.li-9 {
+        background-color: rgb(255, 203, 211);
+        border: 1px solid rgb(255, 203, 211);
+    }
+    li.li-10 {
+        background-color: rgb(128, 0, 128);
+        border: 1px solid rgb(128, 0, 128);
+    }
+    li.li-11 {
+        background-color: rgb(252, 237, 208);
+        border: 1px solid rgb(252, 237, 208);
+    }
+    li.li-12 {
+        background-color: rgb(98, 74, 46);
+        border: 1px solid rgb(98, 74, 46);
+    }
+    li.li-13 {
+        background-color: rgb(236, 198, 193);
+        border: 1px solid rgb(236, 198, 193);
+    }
+</style>
+<body>
+    <div class="pop-up">
+            <div class="title-pop">
+                <span> Reset </span>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="btn-done">
+                <button> Done </button>
+            </div>
+            <div class="display-choose">
+                <span>Type: All</span>
+                <span>Condition: 100%</span>
+                <span>Price: 0-5000</span>
+                <span> Smartphone: All &nbsp <i class="far fa-times-circle"></i></span>
+            </div>
+            <div class="choose-type">
+                <div class="txt-filter"> 
+                    <p>Type</p>
+                </div>
+                <div class="button-choose ">
+                    <button >All</button>
+                    <button >Sale</button>
+                    <button>Exchange</button>
+                </div>
+            </div>
+            <div class="choose-type">
+                    <div class="txt-filter"> 
+                        <p>Categories</p>
+                    </div>
+                    <div class="mobile-choose ">
+                        <button >Smartphone <i class="fas fa-plus"></i></button>
+                        <button >Tablets<i class="fas fa-plus"></i></button>
+                        <button>Smart Watches<i class="fas fa-plus"></i></button>
+                    </div>
+            </div>
+            <div class="choose-type">
+                    <div class="txt-filter"> 
+                        <p>Condition</p>
+                    </div>
+                    <div id="conditon-bar">
+                    </div>
+            </div>
+            <div class="choose-type">
+                    <div class="txt-filter"> 
+                        <p>PRICE</p>
+                    </div>
+                    <div id="price-bar">
+                    </div>
+            </div>
+            <div class="choose-type">
+                <div class="txt-filter"> 
+                    <p>PRICE</p>
+                </div>
+                <div class="li-color">
+                    <ul>
+                        <li class="li-1"></li>
+                        <li class="li-2" ></li>
+                        <li class="li-3" ></li>
+                        <li class="li-4" ></li>
+                        <li class="li-5" ></li>
+                        <li class="li-6" ></li>
+                        <li class="li-7" ></li>
+                        <li class="li-8" ></li>
+                        <li class="li-9" ></li>
+                        <li class="li-10" ></li>
+                        <li class="li-11" ></li>
+                        <li class="li-12" ></li>
+                        <li class="li-13" ></li>
+                    </ul>
+                </div>
+                
+        </div>
+
+    </div>
+</body>
+    <script src="./noUiSlider.11.0.3/nouislider.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script>
+        var slider = document.getElementById('conditon-bar');
+            var wNumb;
+            noUiSlider.create(slider, {
+                start: [0,100],
+                connect: true,
+                tooltips: true,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+
+            });
+
+
+            var slider_price = document.getElementById('price-bar');
+            var wNumb;
+            noUiSlider.create(slider_price, {
+                start: [0,100],
+                connect: true,
+                tooltips: true,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+
+            });
+
+
+        
+    </script>
+
+</html>

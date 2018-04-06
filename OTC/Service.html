@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .service-otc{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .top-sale-order{
+        width: 100%;
+        height: 60px;
+        padding-top: 20px;
+        /* padding-bottom: 30px; */
+        display: flex;
+        flex-direction: row;
+    }
+    .left-search {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .right-button {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .right-button button{
+        width: calc(100%/5);
+        height: 40px;
+        border: none;
+        border: 2px solid #0080FF;
+        background-color: #fff;
+
+
+    }
+    .right-button button:nth-child(2){
+        background-color: #0080FF;
+        color: #fff;
+    }
+    .right-button button:first-child{
+        /* background-color: #0080FF; */
+        /* color: #000; */
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+    .right-button button:last-child{
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+    .table-service{
+        width: 100%;
+        height: 100%;
+       padding: 100px 50px 50px 50px;
+    }
+    table {
+        border: none;
+        width: 100%;
+        border-top: 1px solid #aaa;
+        border-right: 1px solid #aaa;
+    }
+    
+    table tr td{
+        border: none;
+        border-left: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+        height: 40px;
+        text-align: center;
+    }
+    .menu-fix-bottom{
+        width: 100%;
+        height: 80px;;
+        position: absolute;
+        padding-left: 20%;
+        padding-right: 20%;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #eee;
+    }
+    .menu-fix-bottom img{
+        width: 50px;
+        height: 50px;
+    }
+    .icon-fix{
+        width: 55px;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .icon-fix span {
+        color: #212121;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+    }
+    .icon-action{
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+    }
+    .icon-action img {
+        width: 100px;
+        height: 100px;
+    }
+    .control-month{}
+    .span-left{
+        text-align: left;
+    }
+    .span-right{
+        text-align: right;
+    }
+</style>
+<body>
+    <div class="service-otc">
+            <div class="top-sale-order">
+                    <div class="left-search">
+                    </div>
+                <div class="right-button">
+                    <button>Summary</button>
+                    <button>Service</button>
+                    <button>Personel</button>
+                    <button>Equipment</button>
+                    <button>Consumale</button>
+                </div>
+            </div>
+            <div class="table-service">
+                    <table style="width: 100%;">
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">Contract Ref.#</td>
+                                <td rowspan="3">Description</td>
+                                <td rowspan="3">U.O.M</td>
+                                <td colspan="5" class="control-month">
+                                    <span class="span-left ">Back </span>
+                                    <Span> April, 2018</Span>
+                                    <span class="span-right">Next</span>
+                                </td>
+                                <td rowspan="3">hellod</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#A9E2F3">Test</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#A9E2F3" height="70px">a</td>
+                                <td bgcolor="#A9E2F3" height="70px">hello</td>
+                                <td bgcolor="#A9E2F3" height="70px">hello</td>
+                                <td bgcolor="#A9E2F3" height="70px">hello</td>
+                                <td bgcolor="#A9E2F3" height="70px">hello</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#F2F5A9">hello</td>
+                                <td bgcolor="#F2F5A9">hello</td>
+                                <td bgcolor="#F2F5A9">hello</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                                <td bgcolor="#A9E2F3">hello</td>
+                                <td >hello</td>
+                            </tr>
+                        </tbody>
+                    </table>
+             </div>
+             <div class="menu-fix-bottom">
+                    <div class="icon-fix"> 
+                        <img src="./images/info.png" alt="">
+                        <span> Infor</span>
+                    </div>
+                    <div class="icon-fix">
+                        <img src="./images/item.png" alt=""> 
+                        <span> Item</span>
+                    </div>
+                    <div class="icon-fix"> 
+                        <img src="./images/workflow/attachment.png" alt="">
+                        <span> Attachment</span>
+                    </div>
+                    <div class="icon-fix"> 
+                        <img src="./images/workflow/workflow.png" alt="">
+                        <span> Workflow</span>
+                    </div>
+            </div>
+            <div class="icon-action">
+                <img src="./images/plusIcon.png" alt="">
+            </div>
+    </div>
+</body>
+<script>
+
+</script>
+</html>

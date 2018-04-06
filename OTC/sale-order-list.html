@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .sale-order-list{
+        width: 100%;
+        height: 100vh;
+    }
+    .top-sale-order{
+        width: 100%;
+        height: 60px;
+        padding-top: 20px;
+        /* padding-bottom: 30px; */
+        display: flex;
+        flex-direction: row;
+    }
+    .left-search {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .search-frame{
+        width: 80%;
+        height: 40px;
+        padding-right: 15px;
+        position: relative;
+    }
+    .search-frame input[type ="search"]{
+        width: 100%;
+        height: 100%;
+        padding-left: 40px;
+        border-radius: 10px;
+        border: none;
+        border: 1px solid #aaa;
+        font-size: 16px;
+    }
+    .search-frame img{
+        position: absolute;
+        top: 7px;
+        left: 10px;
+    }
+    .left-search button {
+        width: 20%;
+        height: 40px;
+        border: none;
+        border-radius: 7px;
+        background-color: #0080FF;
+        color: #fff;
+    }
+    .right-button {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .right-button button{
+        width: calc(100%/3);
+        height: 40px;
+        border: none;
+        border: 2px solid #0080FF;
+        background-color: #fff;
+
+    }
+    .right-button button:first-child{
+        background-color: #0080FF;
+        color: #fff;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+    .right-button button:last-child{
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+    .middle-sale-order{
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+    }
+    .member-sale{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #eee;
+    }
+    .member-sale-left{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .member-sale-right{
+        width: 50%;
+        height: 100%;
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+    .member-sale-right i {
+        font-size: 20px;
+    }
+    .member-child-left{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .member-child-right {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .member-child-right span {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: #212121;
+    }
+    .member-child-left i {
+        font-size: 40px;
+        color: #eee;
+    }
+    .menu-fix-bottom{
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        background-color: #eee;
+        justify-content: space-around;
+    }
+    .menu-fix-bottom img{
+        width: 50px;
+        height: 50px;
+    }
+    .icon-fix{
+        width: 55px;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .icon-fix span {
+        color: #212121;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+    }
+    .icon-action{
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+    }
+    .icon-action img {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<body>
+    <div class="sale-order-list">
+    <div class="top-sale-order">
+        <div class="left-search">
+            <div class="search-frame">
+                <img src="./images/ico-search.png" alt="">
+                <input type="search" placeholder="Search">
+            </div>
+            <button>Search</button>
+        </div>
+        <div class="right-button">
+                <button> Assigned</button>
+                <button>Favourite</button>
+                <button>All</button>
+        </div>
+    </div>
+    <div class="middle-sale-order">
+        <div class="member-sale">
+            <div class="member-sale-left">
+                <div class="member-child-left">
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="member-child-right">
+                    <span>Squasehed Dinosaurs_524856</span>
+                    <span>2018-03-22</span>
+                </div>
+            </div>
+            <div class="member-sale-right">
+                <span> Draft, waiting for review </span> &nbsp &nbsp
+                <i class="far fa-circle"></i>
+            </div>
+        </div>
+        <div class="member-sale">
+                <div class="member-sale-left">
+                    <div class="member-child-left">
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="member-child-right">
+                        <span>Squasehed Dinosaurs_524856</span>
+                        <span>2018-03-22</span>
+                    </div>
+                </div>
+                <div class="member-sale-right">
+                    <span> Draft, waiting for review </span> &nbsp &nbsp
+                    <i class="far fa-circle"></i>
+                </div>
+            </div>
+            <div class="member-sale">
+                    <div class="member-sale-left">
+                        <div class="member-child-left">
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="member-child-right">
+                            <span>Squasehed Dinosaurs_524856</span>
+                            <span>2018-03-22</span>
+                        </div>
+                    </div>
+                    <div class="member-sale-right">
+                        <span> Draft, waiting for review </span> &nbsp &nbsp
+                        <i class="far fa-circle"></i>
+                    </div>
+            </div>
+            <div class="member-sale">
+                    <div class="member-sale-left">
+                        <div class="member-child-left">
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="member-child-right">
+                            <span>Squasehed Dinosaurs_524856</span>
+                            <span>2018-03-22</span>
+                        </div>
+                    </div>
+                    <div class="member-sale-right">
+                        <span> Draft, waiting for review </span> &nbsp &nbsp
+                        <i class="far fa-circle"></i>
+                    </div>
+                </div>
+                <div class="menu-fix-bottom">
+                    <div class="icon-fix"> 
+                        <img src="./images/Allchoosen.png" alt="">
+                        <span> All</span>
+                    </div>
+                    <div class="icon-fix">
+                        <img src="./images/Draft.png" alt=""> 
+                        <span> Drafted</span>
+                    </div>
+                    <div class="icon-fix"> 
+                        <img src="./images/Review.png" alt="">
+                        <span> Reviewed</span>
+                    </div>
+                    <div class="icon-fix"> 
+                        <img src="./images/Execute.png" alt="">
+                        <span> Excuted</span>
+                    </div>
+                    <div class="icon-fix"> 
+                        <img src="./images/Approve.png" alt="">
+                        <span> Approved</span>
+                    </div>
+                    <div class="icon-fix"> 
+                        <img src="./images/Complete.png" alt="">
+                        <span> Complete</span>
+                    </div>
+                    
+            </div>
+            <div class="icon-action">
+                    <img src="./images/plusIcon.png" alt="">
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>

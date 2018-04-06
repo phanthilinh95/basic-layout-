@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./noUiSlider.11.0.3/nouislider.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .add-device-to-web{
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .top-add-device{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+    .top-add-device-child{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .bold-span-gray{
+        font-weight: bold;
+        font-size: 11px;
+        color: #aaa;
+    }
+    .attribute-product{
+        font-size: 14px;
+        color: #212121;
+    }
+    .title-add-device{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        align-items: center;
+    }
+    .title-add-device i{
+        color: #ff9800;
+        font-size: 8px;
+    }
+    .title-add-device span{
+        font-size: 12px;
+        color: #aaa;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+    }
+    .btn-submit{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+    .btn-submit button {
+        width: 49%;
+        height: 40px;
+        margin-right: 15px;
+        border: none;
+        background-color: #ff9800;
+        text-transform: uppercase;
+        color: #fff;
+        border: 1px solid #ddd;
+    }
+    .btn-submit button:first-child{
+        background-color: #fff;
+        border: 1px solid #ddd;
+        color: #ff9800;
+    }
+    .btn-submit button:nth-child(2){
+        margin-right: 0;
+    }
+    .choose-device, .choose-capacity{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+    }
+    .choose-device select, .choose-capacity select {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border: 1px solid #aaa;
+        padding-left: 30px;
+        color: #222;
+        
+    }
+    .choose-device i, .choose-capacity i {
+        position: absolute;
+        top: 25px;
+        left: 10px;
+        z-index: 999;
+        font-size: 14px;
+        color: #aaa;
+    }
+    .range-slider{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .noUi-connect{
+	background-color:  #ff9800 !important;
+    }
+    .noUi-target{
+        width: 95% !important;
+        height: 5px !important;
+    }
+    .noUi-handle{
+        border-radius: 50% !important;
+        background-color: #ff9800 !important;
+        box-shadow:  0 0 0 !important;
+    }
+    .noUi-horizontal .noUi-handle{
+        width: 15px !important;
+        height: 15px !important;
+        top: -7px !important;
+        left: -8px;
+    }
+    .noUi-handle:before, .noUi-handle:after{
+        content: "";
+        display: block;
+        position: absolute;
+        height: 0;
+        width: 0;
+        background: #E8E7E6;
+        left: 0;
+        top: 0;
+    }
+    .noUi-connect{
+        box-shadow:  0 0 0 !important;
+    }
+    /**/
+    .choose-price{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .choose-price-child{
+        width: 50%;
+        position: relative;
+        padding-right: 15px;
+    }
+    .choose-price-child:nth-child(2){
+        padding-right: 0px;
+    }
+    .choose-price-child input{
+        width: 100%;
+        height: 40px;
+        border: none;
+        border: 1px solid #aaa;
+        padding-left: 30px;
+        color: #222;
+        
+
+    }
+    .choose-price-child i {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        z-index: 999;
+        font-size: 14px;
+        color: #aaa;
+    }
+    .choose-price-child select{
+        width: 100%;
+        height: 40px;
+        border: none;
+        border: 1px solid #aaa;
+        padding-left: 30px;
+        color: #222;
+    }
+    .decription-product{
+        margin: 0px 0px 10px 0px;;
+        padding: 10px 10px ;
+        width: 100%;
+        height: 100px;
+        border: 1px solid #aaa;
+    }
+    .decription-product textarea {
+        width: 100%;
+        height: 100%;
+        border: none;
+
+    }
+    .upload-device{
+        width: 100%;
+        height: 100px;
+        border: 1px solid #aaa;
+    }
+    .choose-price-child-wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .wrap-span-device{
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: row;
+    }
+    .span-one, .span-two {
+        width: 50%;
+        font-size: 12px;
+        color: #212121;
+    }
+    .span-label-device{
+        width: 100%;
+       
+       
+    }
+    .span-label-device span{
+        font-size: 12px;
+        color: #212121;
+    }
+   
+            
+
+    </style>
+<body>
+    <div class="add-device-to-web">
+        <div class="top-add-device">
+            <div class="top-add-device-child">
+                <span class="bold-span-gray">Imei/Serial number</span>
+                <span class="attribute-product">104286919</span>
+            </div>
+            <div class="top-add-device-child">
+                <span class="bold-span-gray">Category</span>
+                <span class="attribute-product">Smart Phones</span>
+            </div>
+            <div class="top-add-device-child">
+                <span class="bold-span-gray">Brand</span>
+                <span class="attribute-product">Huawei</span>
+            </div>
+            <div class="top-add-device-child">
+                <span class="bold-span-gray">Model</span>
+                <span class="attribute-product">P10</span>
+            </div>
+        </div>
+        <div class="title-add-device">
+            <i class="fas fa-circle"></i>&nbsp
+            <span>Color. Lorem Ipsum is simply dummy text of the.</span>
+        </div>
+        <div class="span-label-device">
+            <span>Color </span>
+        </div>
+        <div class="choose-device">
+            <select name="" id="">
+                <option value=""> Choose Color </option>
+                <option value=""> White </option>
+            </select>
+            <i class="fas fa-eye-dropper"></i>
+        </div>
+
+        <div class="title-add-device">
+            <i class="fas fa-circle"></i>&nbsp
+            <span>Capacity. Lorem Ipsum is simply dummy text of the.</span>
+        </div>
+        <div class="span-label-device">
+                <span>Capacity </span>
+            </div>
+        <div class="choose-capacity">
+            <select name="" id="">
+                <option value="">Choose Capacity </option>
+                <option value="">White </option>
+            </select>
+            <i class="fas fa-eye-dropper"></i>
+        </div>
+        <div class="title-add-device">
+            <i class="fas fa-circle"></i>&nbsp
+            <span>Condition. All devices listed for sale on Swap-ez marketplace must meet our Criteria for Sale.</span>
+        </div>
+        <div class="span-label-device">
+                <span>Condition </span>
+            </div>
+        <div id="range-condition" class="range-slider">
+
+        </div>
+        <div class="title-add-device">
+            <i class="fas fa-circle"></i>&nbsp
+            <span>Add price here. Lorem Ipsum is simply dummy text of the.</span>
+        </div>
+        <div class="choose-price">
+            <div class="wrap-span-device">
+                <div class="span-one"> Your Price </div>
+                <div class="span-two"> Money Currency</div>
+            </div>
+                <div class="choose-price-child-wrap">
+                <div class="choose-price-child">
+                    <input type="text" placeholder="">
+                    <i class="fas fa-eye-dropper"></i>
+                </div>
+                <div class="choose-price-child">
+                    <select name="" id="">
+                        <option value="">USD </option>
+                        <option value="">VND </option>
+                    </select>
+                        <i class="fas fa-eye-dropper"></i>
+                </div>
+            </div>
+        </div>
+        <div class="title-add-device">
+            <i class="fas fa-circle"></i>&nbsp
+            <span>Put attribute info on your device: accessories, guarantee.</span>
+        </div>
+        <div class="choose-price">
+                <div class="wrap-span-device">
+                    <div class="span-one">accessories </div>
+                    <div class="span-two"> Money Currency</div>
+                </div>
+                    <div class="choose-price-child-wrap">
+                    <div class="choose-price-child">
+                            <select name="" id="">
+                                <option value="">accessories </option>
+                                <option value="">accessories </option>
+                            </select>
+                        <i class="fas fa-eye-dropper"></i>
+                    </div>
+                    <div class="choose-price-child">
+                        <select name="" id="">
+                            <option value="">guarantee </option>
+                            <option value="">guarantee </option>
+                        </select>
+                            <i class="fas fa-eye-dropper"></i>
+                    </div>
+                </div>
+            </div>
+        <div class="title-add-device">
+            <i class="fas fa-circle"></i>&nbsp
+            <span>Product Decription</span>
+        </div>
+        <div class="decription-product">
+           <textarea name="" id="" placeholder="Write a product description.."></textarea>
+        </div>
+        <div class="title-add-device">
+            <i class="fas fa-circle"></i>&nbsp
+            <span>Upload image</span>
+        </div>
+        <div class="upload-device">
+
+        </div>
+
+
+        <div class="btn-submit">
+            <button>Submit</button>
+            <button>Cancel</button>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="./noUiSlider.11.0.3/nouislider.min.js"> </script>
+<script>
+    var limitSlider = document.getElementById('range-condition');
+    
+    noUiSlider.create(limitSlider, {
+        start: [ 50, 100 ],
+        limit: 100,
+        behaviour: 'drag',
+        connect: true,
+        range: {
+            'min': 50,
+            'max': 100
+        }
+    });
+</script>
+</html>

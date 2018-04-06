@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+      }
+    .item-sort{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+    }
+    .img-product{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-product img {
+        width: 40px;
+        height: 60px;
+    }
+    .info-product{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        /* align-content: center; */
+        padding-top: 30px;
+    }
+    .name-product{
+        color: #212121;
+        font-weight: bold;
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+    .type-product{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        padding-right: 15px;
+        text-align: right;
+        padding-top: 25px;
+    }
+    .origin, .capacity{
+        font-size: 12px;
+        color: #aaa;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    .price-item{
+        font-size: 12px;
+        font-weight: bold;
+        color: #212121;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    .wrap-border{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #eee;
+    }
+    .exchange-with{
+        font-size: 11px;
+        color: #aaa;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+   
+</style>
+<body>
+    <div class="item-sort">
+        <div class="img-product">
+            <img src="http://demo.swap-ez.com:1004/products/598a6c24d792791950a00a16_1.jpg" alt="">
+        </div>
+        <div class="wrap-border">
+            <div class="info-product"> 
+                <span class="name-product"> Zenphone 3 </span>
+                <p class="origin"> Asus </p>
+                <p class="capacity"> 64GB - Black </p>
+            </div>
+            <div class="type-product">
+                <p class="price-item">Sale: $129</p>
+                <p class="price-item">Exchange: $129</p>
+                <p class="exchange-with">Exchange with:  Iphone 7</p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .mbs-tab-information{
+        width: 100%;
+        height: 40px;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        box-shadow:  2px 1px 2px 1px #BDBDBD;
+    }
+    .mbs-tab-information span{
+        text-transform: uppercase;
+        color: #ff9800;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .mbs-contain-cart{
+        width: 100%;
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid #aaa;
+    }
+    .contain-img{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+    }
+    .mbs-contain-cart img {
+        width: 120px;
+        height: 120px;
+    }
+    .contain-span{
+        width: 100%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .contain-span span{
+        color: #aaa;
+        font-weight: bold
+    }
+    .contain-p-tag{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contain-p-tag p {
+        color: #aaa;
+        font-size: 14px;
+    }
+    .btn-continue-shopping{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        justify-content: center
+    }
+    .btn-continue-shopping button {
+        border: none;
+        width: 290px;
+        height: 40px;
+        background-color: #ff9800;
+        color: #fff;
+        text-transform: uppercase;
+
+    }
+</style>
+<body>
+        <div class="mbs-tab-information">
+            <span>My cart</span>
+        </div>
+        <div class="mbs-contain-cart">
+            <div class="contain-img">
+                <img src="http://demo.swap-ez.com/templates/swap-ez/img/banner/empty-cart.png" alt="Not image">
+            </div>
+            <div class="contain-span">
+                <span> Your cart is empty </span>
+            </div>
+            <div class="contain-p-tag">
+                <p>Looks like you haven't made your choice yet</p>
+            </div>
+            <div class="btn-continue-shopping">
+                <button> Continue Shopping </button>
+            </div>
+
+        </div>
+    
+
+    
+</body>
+</html>
