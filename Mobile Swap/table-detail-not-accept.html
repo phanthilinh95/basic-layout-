@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+    }
+    .table-detail-prosal{
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .child-table-detail-prosal{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+    }
+    span.black-type{
+        color: #212121;
+        font-size: 13px;
+    }
+    span.gray-type{
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+        color: #aaa;
+        font-size: 12px;
+    }
+    .btn-accept-decline{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+        
+    }
+    .btn-accept-decline button{
+        width: 50%;
+        height: 50px;
+        border: none;
+        border: 1px solid #eee;
+        margin-right: 10px;
+        font-size: 14px;
+    }    
+    .btn-accept-decline button:nth-child(2){
+        margin-right: 0px;
+    }
+    button.btn-accept {
+        background-color: #ff9800;
+        color: #fff;
+    }
+    button.btn-decline{
+        background-color: #fff;
+        color: #212121;
+        box-shadow:  2px 2px solid #aaa;
+    }
+    .btn-counter{
+        width: 100%;
+        padding-top: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .btn-counter button{
+        width: 100%;
+        height: 50px;
+        background-color: #ff9800;
+        text-transform: uppercase;
+        border: none;
+        border: 1px solid #eee;
+        color: #fff;
+        font-size: 12px;
+    }
+    .btn-counter button a{
+        color: #fff;
+    }
+</style>
+<body>
+    <div class="table-detail-prosal">
+        <div class="child-table-detail-prosal">
+            <span class="black-type">Type</span>
+            <span class="gray-type">Sale</span>
+        </div>
+        <div class="child-table-detail-prosal">
+            <span class="black-type">Status</span>
+            <span class="gray-type">Accepted</span>
+        </div>
+        <div class="child-table-detail-prosal">
+            <span class="black-type">Date</span>
+            <span class="gray-type">2018-03-30 8:08:31</span>
+        </div>
+        <div class="child-table-detail-prosal">
+            <span class="black-type">User ID</span>
+            <span class="gray-type">1513327936292</span>
+        </div>
+    </div>
+    <div class="btn-accept-decline">
+        <button class="btn-decline">Decline</button>
+        <button class="btn-accept">Accept</button>
+    </div>
+    <div class="btn-counter">
+        <button> You can <a href="">counter prosal here!</a></button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+   
+    .menu-top-desktop{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        background-color: #000;
+    }
+    .container{
+        width: 1285px;
+        /* margin: 0 auto; */
+    }
+    .menu-top-desktop .container ul{
+       
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       
+    }
+    .menu-top-desktop .container ul li {
+        width: calc(100% /8);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 14px;
+        list-style-type: none;
+    }
+    .menu-top-desktop .container ul li i {
+        font-size: 16px;
+    }
+    .menu-top-desktop .container ul li:hover{
+        background-color: #aaa;
+    }
+    .menu-top-mobile{
+        width: 100%;
+        height: 60px;
+        background-color: #000;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .menu-top-mobile ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-top-mobile ul li{
+        color: #fff;
+        list-style-type: none;
+    }
+    @media only screen and (min-width: 240px) and (max-width: 700px){
+        .menu-top-mobile{
+            display: block;
+        }
+        .menu-top-desktop{
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 701px) and (max-width: 1284px){
+        .menu-top-desktop .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .menu-top-desktop{
+            display: block;
+        }
+        .menu-top-mobile{
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1285px){
+        .menu-top-mobile{
+            display: none;
+        }
+    }
+</style>
+<body>
+    <div class="menu-top-desktop ">
+        <div class="container">
+            <ul>
+                <li> 
+                    <i class="fas fa-sync-alt"></i>
+                </li>
+                <li>
+                    Your Purpose
+                </li>
+                <li>
+                    SmartPhone
+                </li>
+                <li>
+                     Tablet
+                </li>
+                <li>
+                    SmartWatches
+                </li>
+                <li>
+                    Support
+                </li>
+                <li>
+                    <i class="fas fa-search"></i>
+                </li>
+                <li>
+                    <i class="fas fa-shopping-bag"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-top-mobile">
+        <ul>
+            <li> <i class="fas fa-shopping-bag"></i></li>
+            <li> <i class="fas fa-sync-alt"></i></li>
+            <li> <i class="fas fa-shopping-bag"></i></li>
+        </ul>
+    </div>
+
+    
+</body>
+</html>
