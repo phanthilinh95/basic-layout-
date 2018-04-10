@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .container{
+        width: 1285px;
+    }
+    .filter-frame-desktop{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .filter-frame-desktop .container {
+        display: flex;
+        flex-direction: row;
+       
+    }
+    .filter-child-1{
+        width: calc(100% /3);
+        height: 250px;
+        margin-right: 10px;
+        background-color: #0B3B0B;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .filter-child-1 img, .filter-child-2 img, .filter-child-3 img{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        height: 245px;
+    }
+    .filter-child-2{
+        width: calc(100% /3);
+        height: 250px;
+        margin-right: 10px;
+        background-color: #8A2908;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .filter-child-3{
+        width: calc(100% /3);
+        height: 250px;
+        background-color: #3B0B0B;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .txt-absolute{
+        position: absolute;
+        width: calc(100% - 30px);
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .txt-absolute :before{
+        border-left: 1px solid #fff;
+        border-top: 1px solid #fff;
+    }
+    .txt-absolute :after{
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+    .txt-absolute span{
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 24px;
+        padding-bottom: 5px;
+    }
+    .txt-absolute p{
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+
+    }
+    
+</style>
+<body>
+    <div class="filter-frame-desktop">
+        <div class="container">
+            <div class="filter-child-1">
+                <img src="http://demo.swap-ez.com/assets/purpose-3.f35f06dd94ea2f3bd8e77baeef2889b7.jpg" alt="">
+                <div class="txt-absolute">
+                    <span> Buy </span>
+                    <p>You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you.</p>
+                </div>
+            </div>
+            <div class="filter-child-2">
+                <img src="http://demo.swap-ez.com:/assets/purpose-2.7fe9a8bb8df5bbbd5ac444f2191e8c7b.jpg" alt="">
+                <div class="txt-absolute">
+                        <span> Sale </span>
+                        <p>You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you.</p>
+                    </div>
+            </div>
+            <div class="filter-child-3">
+                <img src="http://demo.swap-ez.com:/assets/purpose-1.0b3f74d82fe03f71b8a5d7c43687b3c1.jpg" alt="">
+                <div class="txt-absolute">
+                        <span> Exchange </span>
+                        <p>You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
