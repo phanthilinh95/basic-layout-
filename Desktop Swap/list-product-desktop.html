@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    .mbs-container{
+		width: 1285px;
+		margin: 0 auto;
+	}
+	.main{
+		display: flex;
+		flex-direction: column;
+	}
+	.mbs-list-product{
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+		flex-wrap: wrap;
+	}
+	
+	.mbs-list-product .mbs-product{
+		width: 237px;
+		height: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.mbs-list-product .mbs-product .mbs-img-product{
+		padding-top: 30px;
+		position: relative;
+		width: 100%;
+		height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+	.mbs-list-product .mbs-product .mbs-img-product img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.mbs-list-product .mbs-product .mbs-img-product .mbs-compare-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+	}
+	.mbs-list-product .mbs-product .mbs-img-product .mbs-compare-icon i{
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		margin-top: 2px;
+	}
+	.mbs-product .mbs-info-product{
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+        display: flex;
+        justify-content: flex-start;
+	}
+	.mbs-product .mbs-info-product a{
+	 	text-transform: uppercase;
+	 	font-family: 'Raleway', sans-serif;
+	 	font-weight: 700;
+	 	font-size: 14px;
+	 	text-decoration: none;
+	 	color: #000;
+	}
+	.mbs-product .mbs-info-product a:hover{
+		color: #ff9800;
+	}
+	.mbs-product .mbs-info-product span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.mbs-evaluate{
+		display: flex;
+		flex-direction: row;              
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.mbs-info-product button{
+		margin-top: 40px;
+		border: none;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+	.mbs-evaluate i {
+		color: #FF9800;
+	}
+	.control-navigation {
+		display: flex;
+		flex-direction: row;
+		height: 40px;
+		border-bottom: 1px solid #eee;
+        justify-content: space-between;
+	}
+    .control-navigation .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+	.control-navigation .navigation ul{
+		display: flex;
+		flex-direction: row;
+		width: 240px;
+        align-items: center;
+        justify-content: flex-end;
+	}
+	.control-navigation .navigation ul li {
+		list-style-type: none;
+		width: calc(100% / 3 );
+		height: 40px;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+	.control-navigation .navigation ul li a{
+		text-decoration: none;
+		color: #000;
+	}
+	.control-navigation .navigation ul li:hover{
+		border-bottom: 2px solid #ff9800;
+		font-weight: 700;
+	}
+	.control-navigation p{
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+	}
+	.control-navigation .navigation i{
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 7px;
+		padding-right: 7px;
+		border: 1px solid #eee;
+		margin-right: 2px;
+	}
+	.btn-exchange button{
+		width: 100%;
+		margin-top: 40px;
+		border: none;
+		height: 40px;
+		background-color: #ff9800;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+	.cleave-button{
+		width: 100%;
+		height: 40px;
+		display: flex;
+		flex-direction: row;
+		margin-top: 40px;
+		position: relative;
+        align-items: center;
+        justify-content: space-between;
+	}
+	.cleave-button .buy-pro, .cleave-button .exchange-pro{
+		width: 49%;
+	}
+	.cleave-button .buy-pro button {
+		width: 100%;
+		border: none;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+	.cleave-button .exchange-pro button{
+		width: 100%;
+		border: none;
+		height: 40px;
+		background-color: #ff9800;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+	.cleave-button span{
+		position: absolute;
+	    top: 15%;
+	    left: 44%;
+	    color: #aaa;
+	    padding: 3px;
+	    border: 1px solid #aaa;
+	    border-radius: 50%;
+	    background-color: #eee;
+	    font-weight: 700;
+	    font-family: 'Raleway', sans-serif;
+	    font-size: 12px;
+	    width: 20px;
+	    height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	    
+	}
+	@media screen and (max-width: 575px) and (min-width: 240px){
+		.mbs-container{
+			width: 100%;
+		}
+		.mbs-product{
+			width: calc(100% / 2);
+		}
+		
+	}
+
+	@media screen and (max-width: 768px) and (min-width: 576px){
+		.mbs-container{
+			width: 100%;
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+		.mbs-product{
+			width: calc(100% / 3);
+		}
+	}
+	@media screen and (max-width: 900px) and (min-width: 769px){
+		.mbs-container{
+			width: 80%;
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+		.mbs-product{
+			width: calc(100% / 4);
+		}
+		
+	}
+	@media screen and (max-width: 1000px) and (min-width: 900px){
+		.mbs-container{
+			width: 85%;
+		}
+		.mbs-product{
+			width: calc(100% / 4);
+		}
+		
+	}
+	@media screen and (max-width: 1140px) and (min-width: 1001px){
+		.mbs-container{
+			width: 85%;
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+		.mbs-product{
+			width: calc(100% / 4);
+		}
+	}
+	@media screen and (max-width: 1200px) and (min-width: 1141px){
+		.mbs-container{
+			width: 100%;
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+		.mbs-product{
+			width: calc(100% / 4);
+		}
+	}
+</style>
+<body>
+        <div class="mbs-container control-navigation ">
+                <p> Product List</p>
+                <div class="navigation" >
+                    <ul>
+                        <li><a href="">All</a></li>
+                        <li><a href="">Sale</a></li>
+                        <li><a href="">Exchange</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+                <div class=" mbs-container mbs-list-product">
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="http://demo.swap-ez.com:1004/products/images-1517801934262.png">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search" ></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                 <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <div class="btn-exchange">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product ">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"  ></i>
+                                <i class="fa fa-compress"  ></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                 <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                        </div>
+                        <div class="cleave-button">
+                            <div class="buy-pro">
+                                <button>Buy</button>
+                            </div>
+                            <span>or</span>
+                            <div class="exchange-pro">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="http://demo.swap-ez.com:1004/products/images-1517801934262.png">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"  ></i>
+                                <i class="fa fa-compress"  ></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star-half-o"  ></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="http://demo.swap-ez.com:1004/products/images-1517801934262.png">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"  ></i>
+                                <i class="fa fa-compress"  ></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star-half-o"  ></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                        </div>
+                        <div class="cleave-button">
+                            <div class="buy-pro">
+                                <button>Buy</button>
+                            </div>
+                            <span>or</span>
+                            <div class="exchange-pro">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="http://demo.swap-ez.com:1004/products/images-1517801934262.png">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                               
+                            </div>
+                            <span>Sale: $1889</span>
+                            <div class="btn-exchange">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product ">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"  ></i>
+                                <i class="fa fa-compress"  ></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product ">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                        </div>
+                        <div class="cleave-button">
+                            <div class="buy-pro">
+                                <button>Buy</button>
+                            </div>
+                            <span>or</span>
+                            <div class="exchange-pro">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="http://demo.swap-ez.com:1004/products/images-1517801934262.png">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                        </div>
+                        <div class="cleave-button">
+                            <div class="buy-pro">
+                                <button>Buy</button>
+                            </div>
+                            <span>or</span>
+                            <div class="exchange-pro">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <div class="btn-exchange">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                        </div>
+                        <div class="cleave-button">
+                            <div class="buy-pro">
+                                <button>Buy</button>
+                            </div>
+                            <span>or</span>
+                            <div class="exchange-pro">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                        </div>
+                        <div class="cleave-button">
+                            <div class="buy-pro">
+                                <button>Buy</button>
+                            </div>
+                            <span>or</span>
+                            <div class="exchange-pro">
+                                <button>Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbs-product">
+                        <div class="mbs-img-product ">
+                            <img  src="https://i.ebayimg.com/images/g/ogUAAOSw8b1aPJUV/s-l300.jpg">
+                            <div class="mbs-compare-icon">
+                                <i class="fa fa-search"  ></i>
+                                <i class="fa fa-compress"  ></i>
+                            </div>
+                        </div>
+                        <div class="mbs-info-product ">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="mbs-evaluate">
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                <i class="fa fa-star"  ></i>
+                                
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    
+</body>
+</html>

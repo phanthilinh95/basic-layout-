@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+	*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .featured-product-desktop{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .mbs-container{
+        width: 1285px;
+    }
+    .mbs-container .control-navigation{
+        display: flex;
+        justify-content: center;
+    }
+    .control-navigation {
+        justify-content: space-between;
+		display: flex;
+		flex-direction: row;
+		height: 50px;
+		border-bottom: 1px solid #eee;
+        margin: 0 auto;
+	}
+	.control-navigation .navigation{
+		display: flex;
+		flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+	}
+	.control-navigation p{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		margin-top: 20px;
+	}
+	.control-navigation .navigation i{
+		margin-top: 10px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 7px;
+		padding-right: 7px;
+		border: 1px solid #eee;
+		margin-right: 2px;
+        color: #aaa;
+	}
+    .mbs-feature-product{
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+		flex-wrap: wrap;
+	}
+    .mbs-feature-product .mbs-list-feature{
+		width: 237px;
+		padding-left: 10px;
+		padding-right: 10px;
+		overflow: hidden;
+	}
+    .mbs-feature-product .mbs-list-feature .mbs-img-feature{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		padding-top: 30px;
+		position: relative;
+	}
+    .mbs-feature-product .mbs-list-feature .mbs-img-feature img {
+		width: 200px;
+		height: 230px;
+	}
+	.mbs-feature-product .mbs-list-feature .mbs-img-feature .mbs-compare-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+	}
+	.mbs-feature-product .mbs-list-feature .mbs-img-feature .mbs-compare-icon i{
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		margin-top: 2px;
+	}
+    .mbs-list-feature .mbs-info-feature{
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+        display: flex;
+        justify-content: flex-start;
+	}
+    .mbs-list-feature .mbs-info-feature a{
+	 	text-transform: uppercase;
+	 	font-family: 'Raleway', sans-serif;
+	 	font-weight: 700;
+	 	font-size: 14px;
+	 	text-decoration: none;
+	 	color: #000;
+	}
+    .mbs-list-feature .mbs-info-feature a:hover{
+		color: #ff9800;
+	}
+	.mbs-list-feature .mbs-info-feature span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+    .mbs-evaluate{
+		display: flex;
+		flex-direction: row;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+    .mbs-evaluate i {
+		color: #FF9800;
+	}
+    .mbs-list-feature .mbs-info-feature button{
+		margin-top: 40px;
+		border: none;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+</style>
+
+<body>
+    <div class="featured-product-desktop">
+        <div class="mbs-container control-navigation">
+            <p>Feature Product</p>
+            <div class="navigation" >
+                <i class="fa fa-arrow-left"></i>
+                <i class="fa fa-arrow-right" ></i>
+            </div>
+        </div>
+
+
+        <div class=" mbs-container mbs-feature-product">
+            <div class="mbs-list-feature">
+                <div class="mbs-img-feature">
+                    <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                    <div class="mbs-compare-icon">
+                        <i class="fa fa-search"></i>
+                        <i class="fa fa-compress"></i>
+                    </div>
+                </div>
+                <div class="mbs-info-feature">
+                    <a href="">STAINLESS Steels</a>
+                    <div class="mbs-evaluate">
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                        <i class="fa fa-star" ></i>
+                    </div>
+                    <span>Sale: $1889</span>
+                    <button>Buy</button>
+                </div>
+			</div>
+			<div class="mbs-list-feature">
+					<div class="mbs-img-feature">
+						<img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+						<div class="mbs-compare-icon">
+							<i class="fa fa-search"></i>
+							<i class="fa fa-compress"></i>
+						</div>
+					</div>
+					<div class="mbs-info-feature">
+						<a href="">STAINLESS Steels</a>
+						<div class="mbs-evaluate">
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+						</div>
+						<span>Sale: $1889</span>
+						<button>Buy</button>
+				</div>
+			</div>
+
+
+
+			<div class="mbs-list-feature">
+					<div class="mbs-img-feature">
+						<img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+						<div class="mbs-compare-icon">
+							<i class="fa fa-search"></i>
+							<i class="fa fa-compress"></i>
+						</div>
+					</div>
+					<div class="mbs-info-feature">
+						<a href="">STAINLESS Steels</a>
+						<div class="mbs-evaluate">
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+						</div>
+						<span>Sale: $1889</span>
+						<button>Buy</button>
+				</div>
+			</div>
+			<div class="mbs-list-feature">
+					<div class="mbs-img-feature">
+						<img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+						<div class="mbs-compare-icon">
+							<i class="fa fa-search"></i>
+							<i class="fa fa-compress"></i>
+						</div>
+					</div>
+					<div class="mbs-info-feature">
+						<a href="">STAINLESS Steels</a>
+						<div class="mbs-evaluate">
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+						</div>
+						<span>Sale: $1889</span>
+						<button>Buy</button>
+				</div>
+			</div>
+			<div class="mbs-list-feature">
+					<div class="mbs-img-feature">
+						<img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+						<div class="mbs-compare-icon">
+							<i class="fa fa-search"></i>
+							<i class="fa fa-compress"></i>
+						</div>
+					</div>
+					<div class="mbs-info-feature">
+						<a href="">STAINLESS Steels</a>
+						<div class="mbs-evaluate">
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+							<i class="fa fa-star" ></i>
+						</div>
+						<span>Sale: $1889</span>
+						<button>Buy</button>
+				</div>
+			</div>
+        </div>
+    </div>
+</body>
+</html>

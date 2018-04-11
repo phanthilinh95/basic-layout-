@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .mbs-container{
+		width: 1285px;
+		margin:  0 auto;
+	}
+	.mbs-img-intro{
+		width: 1285px;
+		height: auto;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 50px;
+        justify-content: space-between;
+		
+	}
+	.mbs-img-intro .img-introduce{
+		width: 100%;
+		max-height: 100%;
+		background-color: #000;
+		margin-right: 20px;
+		position: relative;
+	}
+    .mbs-img-intro .img-introduce:after{
+        content: "";
+        position: absolute;
+        transition:all 1s;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+    }
+    .mbs-img-intro .img-introduce:hover:after{
+        background-color: #222;
+        opacity: 0.2;
+    }
+    .mbs-img-intro .img-introduce img {
+		width: 100%;
+		height: 160px;
+        position: absolute;
+        z-index: 9;
+	}
+	.mbs-img-intro .img-introduce-st{
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		position: relative;
+	}
+    .mbs-img-intro .img-introduce-st:after{
+        content: "";
+        position: absolute;
+        transition:all 1s;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        top: 0;
+        left: 0;
+    }
+    .mbs-img-intro .img-introduce-st:hover:after{
+        background-color: #222;
+        opacity: 0.2;
+    }
+	.mbs-img-intro .img-introduce-st img {
+		width: 100%;
+		height: 160px;
+	}
+	.mbs-img-intro .mbs-info-img{
+		position: absolute;
+		top: 30%;
+		left: 10%;
+        z-index: 999;
+	}
+	.info-sale{
+		display: flex;
+		flex-direction: row;
+	}
+	.mbs-img-intro .mbs-info-img h2, .img-introduce-st .info-sale h2 {
+		text-transform: uppercase;
+		font-size: 25px;
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
+		padding: 15px 15px;
+		border: 2px solid #fff;
+	}
+	.mbs-img-intro .mbs-info-img h2 span, .img-introduce-st .info-sale h2 span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 25px;
+		font-weight: 800;
+	}
+	.img-introduce-st .info-sale {
+		position: absolute;
+		top: 30%;
+		right: 10%;
+        z-index: 99;
+	}
+	@media screen and (max-width: 1200px) and (min-width: 691px){
+			.mbs-container{
+				width: 100%;
+			}
+            
+	}
+	@media screen and (max-width: 690px) and (min-width: 300px){
+			.mbs-img-intro{
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				padding-right: 20px;
+				padding-left: 20px;
+			}
+			.img-introduce{
+				margin-bottom: 50px;
+			}
+            .img-introduce-st{
+                margin-top: 120px;
+            }
+	}
+
+</style>
+<body>
+    <div class=" mbs-container mbs-img-intro">
+         <div class="img-introduce">
+            <img src="http://demo.swap-ez.com/assets/image-1.37573b8270fecc5a1497246ba39b0cda.png">
+                <div class="mbs-info-img">
+                    <h2>City &nbsp<span>Street</span></h2>
+                </div>
+            </div>
+        <div class="img-introduce-st">
+            <img src="http://demo.swap-ez.com/assets/image-2.58595476af4b37af9d94ef2cd0ffeb28.png">
+            <div class="info-sale">
+                <h2>Top &nbsp<span>Sale</span></h2>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
