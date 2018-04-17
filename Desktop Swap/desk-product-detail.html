@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700,900');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .desktop-container{
+		width: 1285px;
+		margin: 0 auto;
+	}
+	.desk-break-crumbs{
+        display: flex;
+        align-items: flex-end;
+		width: 100%;
+		height: 80px;
+		border-bottom: 1px solid #eee;
+		padding-bottom: 20px; 
+	}
+	.desk-break-crumbs span a{
+		color: #000;
+		font-family: 'Raleway', sans-serif;
+		font-size: 14px;
+		text-decoration: none;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+	 .desk-break-crumbs span a:hover{
+		text-decoration: underline;
+	}
+	.desk-contain-product{
+		width: 70%;
+		display: flex;
+		flex-direction: column;
+	}
+	.desk-detail-product{
+		width: 100%;
+	    display: flex;
+	    flex-direction: row;
+	    padding-top: 50px;
+	    padding-right: 20px;
+	    padding-bottom: 50px;
+	}
+	/**/
+	.desk-recent-product{
+		width: 30%;
+		height: 630px;
+		padding-top: 40px;
+		border-bottom: 1px solid #eee;
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		padding-left: 10px;
+	}
+	.desk-element-st{
+		width: 100%;
+		height: 530px;
+		overflow: auto;
+
+	}
+	.desk-element-st::-webkit-scrollbar {
+    	width: 5px;
+	}
+ 
+	/* Track */
+	.desk-element-st::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	}
+ 
+	/* Handle */
+	.desk-element-st::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #000; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	}
+
+	.desk-element-st::-webkit-scrollbar-thumb:window-inactive {
+    background: #aaa; 
+	}
+	/**/
+    .desk-img-pro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+	.desk-img-product{
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+	}
+	.desk-describe-product{
+		width: 100%;
+		padding-left: 20px;
+		
+	}
+    .desk-contain-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+	.desk-contain-img img{
+		width: 340px;
+		height: 355px;
+		margin-bottom: 50px;
+	}
+	.desk-img-zoom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		height: 115px;
+	}
+	.desk-img-zoom img{
+		padding: 20px;
+		width: 90px;
+		height: 90px;
+	}
+	.control-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		padding: 20px;
+		height: 40px;
+	}
+	.desk-name-product{
+		margin-bottom: 20px;
+	}
+	.desk-name-product span{
+		text-transform: uppercase;
+		font-size: 25px;
+		font-weight: 700;
+		font-family: 'Raleway', sans-serif;
+	}
+	.desk-evaluate{
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 20px;
+	}
+	.desk-evaluate i{
+		color: #ff9800;
+	}
+	.desk-sku-code{
+		margin-bottom: 20px;
+	}
+	.desk-sku-code span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+		font-weight: 600;
+		color: rgba(0, 0, 0, 0.87);
+	}
+	.desk-decribe-pro{
+		padding-bottom: 30px;
+		border-bottom: 1px solid #eee;
+	}
+	.desk-decribe-pro p{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+		color: #aaa;
+	}
+	.choose-price{
+        display: flex;
+        align-items: center;
+		height: 40px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+    .choose-price label {
+		font-family: 'Raleway', sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	[type="radio"]:checked,
+	[type="radio"]:not(:checked){
+	    position: absolute;
+	    left: -9999px;
+	}
+	[type="radio"]:checked + label,[type="radio"]:not(:checked) + label{
+	    position: relative;
+	    padding-left: 28px;
+	    cursor: pointer;
+	    line-height: 20px;
+	    display: inline-block;
+	    color: #666;
+	}
+	[type="radio"]:checked + label:before,[type="radio"]:not(:checked) + label:before {
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 18px;
+	    height: 18px;
+	    border: 1px solid #ddd;
+	    border-radius: 100%;
+	    background: #fff;
+	}
+	[type="radio"]:checked + label:after,[type="radio"]:not(:checked) + label:after {
+	    content: '';
+	    width: 10px;
+	    height: 10px;
+	    background: #ff9800;
+	    position: absolute;
+	    top: 5px;
+	    left: 5px;
+	    border-radius: 100%;
+	    -webkit-transition: all 0.2s ease;
+	    transition: all 0.2s ease;
+	}
+	.desk-button-add {
+		width: 100%;
+		height: 50px;
+		display: flex;
+		flex-direction: row;
+		margin-top: 40px;
+	}
+	.desk-button-add button{
+		width: 50%;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		border: none;
+	}
+	.desk-button-add button i {
+		color: #fff;
+	}
+	.desk-evalue-icon{
+		width: 50%;
+		height: 50px;
+		display: flex;
+		flex-direction: row;
+	}
+	.desk-evalue-icon i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		/* text-align: center; */
+	    width: 35px;
+    	height: 35px;
+	    padding: 7px;
+	    border: 1px solid #aaa;
+	    border-radius: 50%;
+	    margin-left: 10px;
+	    color: #aaa;
+	}
+	.desk-share-social-network{
+		margin-top: 25px;
+	}
+	.desk-share-social-network span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+		color: #aaa;
+		font-weight: 500;
+	}
+	.desk-icon-social {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+	}
+	.desk-icon-social i{
+		text-align: center;
+	    width: 35px;
+	    height: 35px;
+	    padding: 7px;
+	    border: 1px solid #eee;
+	    margin-left: 5px;
+	    color: #aaa;
+	}
+	.desk-icon-social i.facebook:hover{
+		background-color: #3B5998;
+		text-decoration: underline;
+		color: #fff;
+	}
+	.desk-icon-social i.google:hover{
+		text-decoration: underline;
+		background-color: #FF4000;
+		color: #fff;
+	}
+	.desk-icon-social i.twitter:hover{
+		background-color: #1e70bf;
+		text-decoration: underline;
+		color: #fff;
+	}
+	.desk-icon-social i.pinterest:hover{
+		background-color: #cb2027;
+		text-decoration: underline;
+		color: #fff;
+	}
+	.desk-icon-social i.rss:hover{
+		background-color: #F36F24;
+		text-decoration: underline;
+		color: #fff;
+	}
+	.desk-view-decribe-product{
+		width: 1285px;
+	    padding-bottom: 30px;
+	    padding-right: 20px;
+	}
+	.desk-title-view{
+		height: 50px;
+		border-bottom: 1px solid #ddd;
+	}
+	.desk-title-view ul{
+		width: 200px;
+		height: 50px;
+		display: flex;
+		flex-direction: row;
+	}
+	.desk-title-view ul li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		list-style-type: none;
+		width: 50%;
+		height: 50px;
+		text-transform: uppercase;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.desk-title-view ul li:hover{
+		border-bottom: 2px solid #ff9800;
+		font-weight: bold;
+	}
+	.desk-content-decribe{
+		padding-left: 5px;
+		padding-right:5px;
+		padding-top: 15px;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+		color: #aaa;
+		font-weight: 500;
+	}
+	.desk-title-recent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		width: 100%;
+		height: 50px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 16px;
+		font-family: 'Raleway', sans-serif;
+		border-bottom: 1px solid #eee;
+		
+	}
+	
+	.desk-recent-pro{
+		display: flex;
+		flex-direction: row;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.desk-img-pro{
+		width: 20%;
+	}
+	.desk-img-pro img{
+		max-width: 55px;
+		max-height: 55px;
+	}
+	.desk-name-pro{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+		width: 70%;
+		padding-left: 20px;
+	}
+	.desk-name-pro a{
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 13px;
+		font-family: 'Raleway', sans-serif;
+		text-decoration: none;
+		color: #000;
+	}
+	.desk-name-pro a:hover{
+		text-decoration: underline;
+	}
+	.desk-package{
+		display: flex;
+		flex-direction: row;
+	}
+	@media screen and (min-width: 320px) and (max-width: 640px){
+		
+		.desk-package{
+		display: flex;
+		flex-direction: column;
+		}
+		.desktop-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		.desk-img-product{
+			width: 100%;
+		}
+		.desk-contain-product{
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+		}
+		.desk-detail-product{
+			width: auto;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			padding-left: 0;
+
+		}
+		.desk-describe-product{
+			width: 100%;
+
+		}
+		.desk-recent-product{
+			width: 100%;
+			margin: 0 auto;
+		}
+		.desk-view-decribe-product{
+			width: 150%;
+		}
+		.desk-break-crumbs .desktop-container{
+			padding-left: 30px;
+		}
+	}
+	@media screen and (min-width: 641px) and (max-width: 768px){
+		.desk-package{
+		display: flex;
+		flex-direction: column;
+		}
+		.desktop-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		.desk-img-product{
+			width: 100%;
+		}
+		.desk-contain-product{
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+		}
+		.desk-detail-product{
+			width: auto;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			padding-left: 0;
+
+		}
+		.desk-describe-product{
+			width: 100%;
+		}
+		.desk-recent-product{
+			width: 100%;
+			margin: 0 auto;
+		}
+		.desk-view-decribe-product{
+			width: 100%;
+		}
+		.desk-break-crumbs .desktop-container{
+			padding-left: 30px;
+		}
+	}
+	@media screen and (min-width: 769px) and (max-width: 960px){
+		.desk-package{
+			display: flex;
+			flex-direction: column;
+		}
+		.desktop-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+			
+		}
+		.desk-img-product{
+			width: 100%;
+		}
+		.desk-contain-product{
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+		}
+		.desk-detail-product{
+			width: auto;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			padding-left: 50px;
+		}
+		.desk-describe-product{
+			width: 100%;
+		}
+		.desk-recent-product{
+			width: 100%;
+			margin: 0 auto;
+		}
+		.desk-view-decribe-product{
+			width:150%;
+		}
+		.desk-break-crumbs .desktop-container{
+			padding-left: 30px;
+		}
+	}
+	@media screen and (min-width: 961px) and (max-width: 1280px){
+		.desk-break-crumbs{
+			padding-left: 50px;
+		}
+		.desk-detail-product{
+			width: 100%;
+
+		 }
+		.desktop-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		.desk-describe-product{
+			width: 100%;
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+		.desk-view-decribe-product{
+			width: 150%;
+		}
+		.desk-contain-img img{
+			width: 250px;
+			height: 250px;
+		}
+	}
+	@media screen and (min-width: 1281px)and (max-width: 1400px){
+		.desktop-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+	}
+</style>
+<body>
+        <div class="desk-break-crumbs">
+                <div class="desktop-container">
+                    <span>
+                        <a href=""> Home</a> &rsaquo;
+                        <a href=""> Product detail</a> &rsaquo;
+                        <a href=""> Leather Brown</a>
+                    </span>
+                </div>
+            </div>
+                
+                <div  class="desktop-container">
+                    <div class="desk-package">
+                        <div class="desk-contain-product">
+                            <div class="desk-detail-product">
+                                <div class="desk-img-product">
+                                    <div class="desk-contain-img">
+                                        <img src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                                    </div>
+                                    <div class="desk-img-zoom">
+                                        <img src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                                    </div>
+                                    <div class="control-img">
+                                        <span>1 </span><span>-</span> <span>1 of 4 </span>
+                                    </div>
+        
+                                </div>
+                                <div class="desk-describe-product">
+                                    <div class="desk-name-product">
+                                        <span>Leather Brown - 32GB</span>
+                                    </div>
+                                    <div class="desk-evaluate">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="desk-sku-code">
+                                        <span>SKU : 59a642cfbaf4d41984acc4b0</span>
+                                    </div>
+                                    <div class="desk-decribe-pro">
+                                        <p>SmartWatch 3 comes in SmartWatch 3 comes in a range of stunning designs. Choose classic stainless steal chain-link, opt for sleek leather or go for something sporty.SmartWatch 3 comes in a range of stunning designs. Choose classic stainless steal chain-link, opt for sleek leather or go for something sporty.SmartWatch 3 comes in a range of stunning designs. Choose classic stainless steal chain-link, opt for sleek leather or go for something sporty.SmartWatch 3 comes in a range of stunning designs. Choose classic stainless steal chain-link, opt for sleek leather or go for something sporty.a range of stunning designs. Choose classic stainless steal chain-link, opt for sleek leather or go for something sporty.</p>
+                                    </div>
+                                    <div class="choose-price">
+                                        <input type="radio" name="ppice" value="1889"> <label> Buy $1889</label>
+                                    </div>
+                                    <div class="desk-button-add">
+        
+                                        <button><i class="fa fa-shopping-cart"></i>Add to cart </button>
+                                        <div class="desk-evalue-icon">
+                                            <i class="fa fa-heart"></i>
+                                            <i class="fa fa-compress"></i>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="desk-share-social-network">
+                                            <span>Share this product</span>
+                                            <div class="desk-icon-social">
+                                                <a href=""><i class="facebook fa fa-facebook"></i></a>
+                                                <a href=""><i class="google fa fa-google-plus"></i></a>
+                                                <a href=""><i class="twitter fa fa-twitter"></i></a>
+                                                <a href=""><i class="pinterest fa fa-pinterest-p"></i></a>
+                                                <a href=""><i class="rss fa fa-rss"></i></a>
+                                            </div>			
+                                        </div>
+                                </div>
+                            </div>
+                        <div class="desk-view-decribe-product">
+                            <div class="desk-title-view">
+                                <ul>
+                                    <li>over View</li>
+                                    <li>tech specs</li>
+                                </ul>		
+                            </div>
+                            <div class="desk-content-decribe">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majo Rity have be suffered alteration in some form, by injected humou or randomis Rity have be suffered alteration in some form, by injected humou or randomis words which donot look even slightly believable. If you are going to use a passage Lorem Ipsum.There are many variations of passages of Lorem Ipsum available, but the majo Rity have be suffered alteration in some form, by injected humou or randomis Rity have be suffered ale many variations of passages of Lorem Ipsum available, but the majo Rity have be suffered alteration in some form, by injected humou or randomis Rity have be suffered alteration in some form, by injected humou or randomis words which donot look even slightly believable. If you are going to use a passage Lorem Ipsum.There are many variations of passages of Lorem Ipsum available, but the majo Rity have be suffered alteration in some form, by injected humou or randomis Rity have be suffered ale many variations of passages of Lorem Ipsum available, but the majo Rity have be suffered alteration in some form, by injected humou or randomis Rity have be suffered alteration in some form, by injected humou or randomis words which donot look even slightly believable. If you are going to use a passage Lorem Ipsum.There are many variations of passages of Lorem Ipsum available, but the majo Rity have be suffered alteration in some form, by injected humou or randomis Rity have be suffered alteration in some form, by injected humou or randomis words which donot look even slightly believable. If you are going to use a passage Lorem Ipsum</p>
+                            </div>
+                        </div>
+        
+                    </div>
+                    
+                    <div class="desk-recent-product">
+                            <div class="desk-title-recent">
+                                Recent Product
+                            </div>
+                            <div class="desk-element-st">
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63e9cbaf4d41984acc4a0_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro ">
+                                        <a href="">Genuine Huawei TalkBand B2 Black</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59819ceb154dd786f42e840b_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">OPPO A115</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/images-1513777039616.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">iphone 10</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro ">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro flex items-center justify-start">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+        
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro ">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+        
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+                                <div class="desk-recent-pro">
+                                    <div class="desk-img-pro">
+                                        <img src="http://demo.swap-ez.com:1004/products/59a63bc4baf4d41984acc492_1.jpg">
+                                    </div>
+                                    <div class="desk-name-pro">
+                                        <a href="">Brand New Samsung Gear Fit 2 SM-R3600ZINXAR Small</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                   
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .desk-wrap-add-device{
+        width: 100%;
+        height: 600px;
+        background-color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .add-device-frame{
+        width: 1050px;
+        height: 300px;
+        background-color: #fff;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    p.fill-input{
+        text-transform: uppercase;
+        color: #212121;
+        padding-left: 10px;
+        border-left: 3px solid #ff9800;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .input-series{
+        width: 50%;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 40px;
+        padding-bottom: 70px;
+        align-items: center;
+    }
+    .label-for-input{
+        width: 15%;
+        height: 100%;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 100%;
+        color: #212121;
+        padding-top: 7px;
+    }
+    .label-for-input i {
+        background-color: #ff9800;
+        padding: 4px 6px;
+        color: #fff;
+        font-size: 8px;
+        border-radius: 50%;
+    }
+    .input-field{
+        width: 85%;
+        height: 100%;
+        position: relative;
+    }
+    .input-field input[type="text"]{
+        width: 100%;
+        height: 100%;
+        margin-left: 15px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0, 0, 0, 0.1)!important;
+        padding-left: 30px;
+        font-size: 14px;
+    }
+    .input-field i{
+        position: absolute;
+        top: 30%;
+        left: 23px;
+        color: #aaa;
+        font-size: 17px;
+    }
+    .button-action{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+    .button-action button{
+        width: 80px;
+        height: 35px;
+        border: none;
+        margin-right: 20px;
+    }
+    .button-action button:nth-child(1){
+        background-color: #eee;
+    }
+    .button-action button:nth-child(1):hover{
+        background-color: #ddd;
+    }
+    .button-action button:nth-child(2){
+        background-color: #000;
+        color: #fff;
+    }
+    .button-action button:nth-child(2):hover{
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
+    }
+
+</style>
+<body>
+    <div class="desk-wrap-add-device">
+        <div class="add-device-frame">
+            <p class="fill-input"> PLEASE FILL IN THE FORM TO ADD YOUR DEVICES</p>
+            <div class="input-series">
+                <div class="label-for-input"> Imei/Serial number&nbsp<i class="fas fa-info"></i></div>
+                <div class="input-field">
+                    <input type="text" placeholder=" Your Imei/Serial">
+                    <i class="fa fa-commenting" aria-hidden="true"></i>               
+                </div>
+            </div>
+            <div class="button-action">
+                <button> Cancel </button>
+                <button> Submit </button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script></script>
+</html>

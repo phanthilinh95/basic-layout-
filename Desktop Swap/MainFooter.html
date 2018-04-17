@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700,900');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .desk-container{
+		width: 1620px;
+		margin: 0 auto;
+	}
+	.desk-main-footer{
+		width: 100%;
+		height: 420px;
+		background-color: #1C1C1C;
+		display: flex;
+		flex-direction: column;
+	}
+	.desk-contain-main{
+		display: flex;
+		flex-direction: row;
+        justify-content: space-between;
+	}
+	.desk-main-1{
+		width: 100%;
+		padding-top: 20px;
+		padding-left: 10px;
+	}
+	.desk-main-1 a{
+		text-decoration: none;
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		font-size: 14px;
+	}
+	.desk-main-1 a:hover{
+		text-decoration: underline;
+	}
+	.desk-main-1 a img{
+		width: 40px;
+		height: 40px;
+	}
+	.desk-main-1 .desk-title-top {
+		height: 50PX;
+		width: 100%;
+	}
+    .desk-main-1 .desk-title-top a{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+	.desk-main-2{
+		width: 100%;
+		padding-top: 30px;
+		padding-left: 10px;
+	}
+	.desk-main-3{
+		width: 100%;
+		padding-top: 30px;
+		padding-left: 10px;
+	}
+	.desk-main-4{
+		width: 100%;
+		padding-top: 30px;
+		padding-left: 10px;
+	}
+	.desk-main-5{
+		width: 100%;
+		padding-top: 30px;
+		padding-left: 10px;
+	}
+	.desk-describe{
+		font-family: 'Raleway', sans-serif;
+		color: #6E6E6E;
+		font-size: 12px;
+	}
+	.desk-main-1 .desk-item-vertical i{
+		font-size: 12px;
+		color: #6E6E6E;
+	}
+	.desk-item-vertical{
+		margin-bottom: 20px;
+	}
+	.desk-item-vertical i{
+		font-size: 12px;
+		color: #6E6E6E;
+	}
+	.desk-item-vertical span{
+		color: #6E6E6E;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.desk-item-vertical a{
+		color: #6E6E6E;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+		text-decoration: none;
+		font-weight: 400;
+	}
+	.desk-item-vertical a:hover{
+		text-decoration: underline;
+	}
+	.desk-title p{
+		padding-left: 5px;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		color: #fff;
+		border-left: 2px solid #ff9800;
+	}
+	.desk-item-vertical input[type = "text"]{
+		width: 150px;
+		height: 30px;
+		border: none;
+		border: 1px solid #6E6E6E;
+		background-color: transparent;
+		color: #666;
+		padding-left: 10px;
+	}
+	.desk-item-vertical textarea{
+		background-color: transparent;
+		width: 150px;
+		border: none;
+		border: 1px solid #6E6E6E;
+		padding-left: 10px;
+		color: #666;
+	}
+	.desk-item-vertical button{
+		width: 150px;
+		height: 30px;
+		border: none;
+		background-color: #000;
+		color: #F2F2F2;
+		font-family: 'Raleway', sans-serif;
+	}
+	.social-network{
+		width: 100%;
+		height: 80px;
+	}
+	.social-network .desk-container {
+		height: 80px;
+		border-bottom: 1px solid #666;
+		display: flex;
+		flex-direction: row;
+	}
+	.social-network a{
+		text-decoration: none;
+	}
+	.social-network i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		width: 40px;
+		height: 40px;
+		padding: 10px;
+		font-size: 20px;
+		color: #6E6E6E;
+		border: 1px solid #666;
+		margin-right: 10px;
+	}
+	.desk-about-swap{
+		width: 100%;
+		height: 80px;
+		background-color: #1c1c1c;
+	}
+	.desk-about-swap .desk-container{
+		display: flex;
+		flex-direction: row;
+	}
+	.desk-about-swap .desk-about-swap-1{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+		width: 30%;
+		color: #fff;
+		height: 80px;
+		
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.desk-about-swap .desk-about-swap-2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+		width: 70%;
+		color: #6E6E6E;
+		height: 80px;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.desk-about-swap .desk-about-swap-2 a.item-a {
+		text-decoration: none;
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+		padding-right: 7px;
+		margin-right: 7px;
+		border-right: 2px solid #fff;
+	}
+	.desk-about-swap .desk-about-swap-2 a.item-a-private{
+		text-decoration: none;
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+    .desk-about-swap .desk-about-swap-2 .item-country{
+        display: flex;
+        align-items: center
+    }
+	.desk-about-swap .desk-about-swap-2 .item-country img {
+		width: 15px;
+		height: 15px;
+		background-color: #000
+	}
+	.desk-about-swap .desk-about-swap-2 .item-country span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+		color: #fff;
+	}
+
+	/*code menu mobile */
+	.desk-footer-mobile{
+		display: flex;
+		flex-direction: column;
+		background-color: #222;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.desk-mobile-1{
+
+		width: 100%;
+		height: 50px;
+		border-bottom: 1px solid #aaa;
+		color: #aaa;
+		margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+	}
+	.desk-mobile-1 span{
+		color: #FFF;
+		font-weight: bold;
+	}
+	.desk-dropdown{
+		display: flex;
+		flex-direction: column;
+	}
+	.desk-dropdown a{
+		color: #fff;
+		text-decoration: none;
+
+	}
+	.desk-dropdown a.desk-item-vertical{
+		margin-bottom: 5px;
+        font-family: 'Raleway', sans-serif;
+        color: #fff;
+        font-size: 14px;
+	}
+	.desk-dropdown .desk-item-vertical input[type = "text"]{
+		width: 100%;
+		height: 30px;
+		border: none;
+		border: 1px solid #6E6E6E;
+		background-color: transparent;
+		color: #666;
+		padding-left: 10px;
+	}
+	.desk-dropdown .desk-item-vertical textarea{
+		background-color: transparent;
+		width: 100%;
+		border: none;
+		border: 1px solid #6E6E6E;
+		padding-left: 10px;
+		color: #666;
+	}
+	.desk-dropdown .desk-item-vertical button{
+		width: 100%;
+		height: 30px;
+		border: none;
+		background-color: #000;
+		color: #F2F2F2;
+		font-family: 'Raleway', sans-serif;
+	}
+	.desk-footer-mobile .desk-detail{
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-size: 14px;
+	}
+	.desk-footer-mobile .item-country img {
+		width: 15px;
+		height: 15px;
+	}
+	.desk-footer-mobile .item-country span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 14px;
+		color: #fff;
+	}
+    .desk-detail-align{
+        display: flex;
+        align-items: center;
+    }
+	.desk-detail-align a.item-a{
+		text-decoration: none;
+		color: #aaa;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+		padding-right: 7px;
+		margin-right: 7px;
+		border-right: 2px solid #fff;
+	}
+	.desk-detail-align a.item-a-private{
+		text-decoration: none;
+		color: #aaa;
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.desk-about-mobile{
+		margin-top: 20px;
+	}
+	.desk-about-mobile .item-country, .desk-about-mobile .desk-detail{
+		margin-bottom: 20px;
+	}
+	@media screen and (max-width: 1620px) {
+		.desk-container{
+			width: 100%;
+		}
+	}
+	@media screen and (min-width: 1130px) {
+
+		.desk-footer-mobile{
+			display: none;
+			}
+		.desk-main-footer{
+			display: block;
+			}
+		.desk-container{
+			width: 90%;
+			}
+		.desk-about-swap-1{
+			padding-left: 5%;
+		}
+	}
+	@media screen and (min-width: 1000px) and (max-width: 1129px){
+		 
+		.desk-footer-mobile{
+			display: none;
+			}
+		.desk-main-footer{
+			display: block;
+			}
+	}
+	@media screen and (max-width: 999px) and (min-width: 320px){
+		.desk-footer-mobile{
+			display: block;
+		}
+		.desk-main-footer{
+			display: none;
+		}
+        .social-network{
+            display: flex;
+            flex-direction: row;
+            margin-right: 10px;
+        }
+
+	}
+</style>
+<body>
+        <div class=" desk-main-footer ">
+                <div class="desk-contain-main desk-container">
+                    <div class="desk-main-1">
+                        <div class="desk-title-top"><a href=""><img src="http://demo.swap-ez.com/assets/logo2.bfe8cc381ae464b6045494b74be163fd.png">SWAP*EZ</a></div>
+                        <div class="desk-describe desk-item-vertical">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                        <div class=" desk-item-vertical ">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span>(098)-686-666888</span>
+                        </div>
+                        <div class="desk-item-vertical">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span>email@swap*ez.com</span>
+                        </div>
+                        <div class="desk-item-vertical">
+                            <i class="fa fa-map" aria-hidden="true"></i>
+                            <span>248 Avenue, Quebec, Canada</span>
+                        </div>
+                    </div>
+                    <div class="desk-main-2">
+                        <div class="desk-title desk-item-vertical">
+                            <p>product</p>
+                        </div>
+                        <div class="desk-item-vertical"><a href="">Smart Phones</a></div>
+                        <div class="desk-item-vertical"><a href="">Tablets</a></div>
+                        <div class="desk-item-vertical"><a href="">Smart Watches</a></div>
+                        <div class="desk-item-vertical"><a href="">Sell Products</a></div>
+                        <div class="desk-item-vertical"><a href="">Exchange Products</a></div>
+                    </div>
+                    <div class="desk-main-3">
+                        <div class="desk-title desk-item-vertical">
+                            <p>my account</p>
+                        </div>
+                        <div class="desk-item-vertical"><a href="">Registration</a></div>
+                        <div class="desk-item-vertical"><a href="">My Cart</a></div>
+                        <div class="desk-item-vertical"><a href="">Checkout</a></div>
+                        <div class="desk-item-vertical"><a href="">My Account</a></div>
+                        <div class="desk-item-vertical"><a href="">My Wishlist</a></div>
+                    </div>
+                    <div class="desk-main-4">
+                        <div class="desk-title desk-item-vertical ">
+                            <p>Quick Support</p>
+                        </div>
+                        <div class="desk-item-vertical">
+                            <input type="text" name="name" placeholder="Your name here">
+                        </div>
+                        <div class="desk-item-vertical">
+                            <input type="text" name="email" placeholder="Your email here">
+                        </div>
+                        <div class="desk-item-vertical">
+                            <textarea name="textarea" rows="4" cols="30" placeholder="Your message here..."></textarea>
+                        </div>
+                        <div class="desk-item-vertical">
+                            <button>Submit</button>
+                        </div>
+                    </div>
+                    <div class="desk-main-5">
+            
+                        <div class="desk-title desk-item-vertical">
+                            <p>About swap*ez</p>
+                        </div>
+                        <div class="desk-item-vertical "><a href="">Newsroom</a></div>
+                        <div class="desk-item-vertical "><a href="">Leadership</a></div>
+                        <div class="desk-item-vertical "><a href="">Job Opportunities</a></div>
+                        <div class="desk-item-vertical "><a href="">Investors</a></div>
+                        <div class="desk-item-vertical "><a href="">Contact Swap-ez</a></div>
+                    </div>	
+                </div>
+                <div class="social-network">
+                    <div class="desk-container">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-google-plus"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class=" desk-about-swap">
+                    <div class="desk-container">
+                        <div class="desk-about-swap-1">
+                            © Swap*EZ 2016. All Rights Reserved.
+                        </div>
+                        <div class="desk-about-swap-2">
+                            <div class="" >
+                                <a href="" class="item-a">Privacy Policy</a>
+                                <a href="" class="item-a">Terms Of Use</a>
+                                <a href="" class="item-a">Sales And Refunds</a>
+                                <a href="" class="item-a">Legal</a>
+                                <a href="" class="item-a-private">Site Map</a>
+                            </div>
+                            <div class="item-country">
+                                <img src="http://icons.veryicon.com/ico/Flag/North%20America%20-%20Mac/Canada.ico"><span>Canada</span>
+                            </div>
+                        </div>
+            
+                </div>
+            </div>
+            </div>
+            <!-- menu-mobile from 960px to 320px  -->
+            <div class="desk-footer-mobile">
+                <div class="desk-mobile-1">
+                    <span>Introduction</span>
+                    <i class="fa right fa-angle-down"></i>
+                </div>
+                <div class="desk-dropdown">
+                        <div class="desk-describe desk-item-vertical">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                        <div class="social-network">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-google"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                <div class="desk-mobile-1">
+                    <span>Products</span>
+                    <i class="fa right fa-angle-down"></i>
+                </div>
+                <div class="desk-dropdown">
+                        <a class="desk-item-vertical" href="">Smart Phones</a>
+                        <a class="desk-item-vertical" href="">Tablets</a>
+                        <a class="desk-item-vertical" href="">Smart Watches</a>
+                        <a class="desk-item-vertical" href="">Sell Products</a>
+                        <a class="desk-item-vertical" href="">Exchange Products</a>
+                </div>
+            
+                <div class="desk-mobile-1">
+                    <span>My account</span>
+                    <i class="fa right fa-angle-down"></i>
+                </div>
+                <div class="desk-dropdown">
+                        <a class="desk-item-vertical" href="">Registation</a>
+                        <a class="desk-item-vertical" href="">My cart</a>
+                        <a class="desk-item-vertical" href="">Check out</a>
+                        <a class="desk-item-vertical" href="">My account</a>
+                        <a class="desk-item-vertical" href="">Exchange Products</a>
+                </div>
+                
+                <div class="desk-mobile-1">
+                    <span>Quick support</span>
+                    <i class="fa right fa-angle-down"></i>
+                </div>
+                    <div class="desk-dropdown">
+                        <div class="desk-item-vertical ">
+                            <input type="text" name="name" placeholder="Your name here">
+                        </div>
+                        <div class="desk-item-vertical ">
+                            <input type="text" name="email" placeholder="Your email here">
+                        </div>
+                        <div class="desk-item-vertical ">
+                            <textarea name="textarea" rows="4" cols="30" placeholder="Your message here..."></textarea>
+                        </div>
+                        <div class="desk-item-vertical ">
+                            <button>Submit</button>
+                        </div>
+                    </div>
+                <div class="desk-mobile-1">
+                    <span>About Swap-ez</span>
+                    <i class="fa right fa-angle-down"></i>
+                </div>
+                <div class="desk-dropdown">
+                        <a class="desk-item-vertical" href="">Newrooms</a>
+                        <a class="desk-item-vertical" href="">Leadership</a>
+                        <a class="desk-item-vertical" href="">Job Opportunities</a>
+                        <a class="desk-item-vertical" href="">Investors</a>
+                        <a class="desk-item-vertical" href="">Contact Swap-ez</a>
+                </div>
+                <div class="desk-about-mobile">
+                    <div class="item-country ">
+                        <img src="http://icons.veryicon.com/ico/Flag/North%20America%20-%20Mac/Canada.ico"><span>Canada</span>
+                    </div>
+                    <div class="desk-detail">
+                        © Swap*EZ 2016. All Rights Reserved.
+                    </div>
+                    <div class="desk-detail-align">
+                            <a href="" class="item-a">Privacy Policy</a>
+                            <a href="" class="item-a">Terms Of Use</a>
+                            <a href="" class="item-a">Sales And Refunds</a>
+                            <a href="" class="item-a">Legal</a>
+                            <a href="" class="item-a-private">Site Map</a>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

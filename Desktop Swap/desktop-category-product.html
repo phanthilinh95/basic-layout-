@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .wrap-category-desktop{
+		width: 1285px;
+		margin: 0 auto;
+
+	}
+    .desk-break-crumbs .wrap-category-desktop{
+        display: flex;
+        justify-content: space-between;
+    }
+	.desk-break-crumbs{
+        display: flex;
+        align-items: center;
+		width: 100%;
+		height: 55px;
+		border-bottom: 1px solid #eee;
+	}
+	.desk-break-crumbs span a{
+		color: #000;
+		font-family: 'Raleway', sans-serif;
+		font-size: 14px;
+		text-decoration: none;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+	 .desk-break-crumbs span a:hover{
+		text-decoration: underline;
+	}
+	.desk-break-crumbs .wrap-category-desktop{
+		display: flex;
+		flex-direction: row;
+	}
+	.desk-sort-layout select{
+		border: none;
+		height: 30px;
+		width: 100px;
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+	}
+	.desk-sort-layout select option {
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+	}
+	.desk-sort-category{
+		width: 15%;
+		padding-right: 30px;
+		padding-top: 20px;
+		border-right: 1px solid #eee;
+		display: flex;
+		flex-direction: column;
+	}
+	.desk-main-category .wrap-category-desktop {
+		display: flex;
+		flex-direction: row;
+	}
+	.desk-sort-drop{
+		width: 100%;
+		height: 50px;
+		margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+	}
+	.desk-sort-drop b{
+		color: #000;
+		font-weight: 700;
+		font-family: 'Raleway', sans-serif;
+	}
+	.desk-sort-drop b:hover{
+		text-decoration: underline;
+	}
+	.desk-item-sort{
+		margin-top: 5px;
+		margin-top: 5px;
+	}
+	 a.desk-item-sort{
+		color: #4F4F4F;
+		text-decoration: none;
+		font-size: 13px;
+	}
+	 a.desk-item-sort:hover{
+		color: #000;
+
+	}
+	.bold-character{
+		font-weight: bold;
+	}
+	.color-char-black{
+		color: #000;
+	}
+	a.desk-item-private{
+		color: #000;
+		font-weight: 700;
+		font-family: 'Raleway', sans-serif;
+	}
+	.desk-wrapper-sort{
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+	/*progress bar*/
+	#slider{
+		  width:100%;
+		  margin-left: 0 !important;
+		  margin-right: 10px !important;
+		  margin-top: 30px;
+		}
+	#slider-st{
+		  width:100%;
+		  margin-left: 0 !important;
+		  margin-right: 10px !important;
+		  margin-top: 30px;
+		}
+	.noUi-connect{
+			background-color:  #ff9800 !important;
+		}
+	.noUi-target{
+		height: 5px !important;
+		}
+	.noUi-handle{
+		border-radius: 50% !important;
+		background-color: #ff9800 !important;
+		box-shadow:  0 0 0 !important;
+		}
+	.noUi-horizontal .noUi-handle{
+		width: 15px !important;
+		height: 15px !important;
+		top: -7px !important;
+		left: -8px;
+		}
+	.noUi-handle:before, .noUi-handle:after{
+		content: "";
+		display: block;
+		position: absolute;
+		height: 0;
+		width: 0;
+		background: #E8E7E6;
+		left: 0;
+		top: 0;
+		}
+	.slider_container{
+			width: 60%;
+		}
+	.noUi-connect{
+		box-shadow:  0 0 0 !important;
+		}
+	
+	/*progress bar*/
+	/*display product*/
+	.desk-display-product{
+		width: 85%;
+		padding-top: 30px;
+		padding-left: 40px;
+		padding-right: 40px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-bottom: 30px;
+	}
+	/*product display category*/
+	.desk-category-produc{
+		flex-wrap: wrap;
+	}
+	.desk-display-product .desk-product{
+		width: 250px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.desk-display-product .desk-product .desk-img-category{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		padding-top: 30px;
+		position: relative;
+	}
+	.desk-display-product .desk-product .desk-img-category img {
+		width: 200px;
+		height: 200px;
+	}
+	.desk-display-product .desk-product .desk-img-category .desk-compare-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+	}
+	.desk-display-product .desk-product .desk-img-category .desk-compare-icon i{
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		margin-top: 2px;
+	}
+	.desk-product .desk-info-category{
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+        justify-content: flex-start;
+	}
+	.desk-product .desk-info-category a{
+	 	text-transform: uppercase;
+	 	font-family: 'Raleway', sans-serif;
+	 	font-weight: 700;
+	 	font-size: 14px;
+	 	text-decoration: none;
+	 	color: #000;
+	}
+	.desk-product .desk-info-category a:hover{
+		color: #ff9800;
+	}
+	.desk-product .desk-info-category span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.desk-evaluate{
+		display: flex;
+		flex-direction: row;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.desk-product .desk-info-category button{
+		margin-top: 40px;
+		border: none;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+	.desk-evaluate i{
+		color: #FF9800;
+	}
+	/*DISPLPAY PRODUCT*/
+	/*color*/
+	.li-color, .li-color ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.li-color ul li {
+        list-style-type: none;
+		width: 17px;
+		height: 20px;
+		border-radius: 50%;
+		margin-right: 5px;
+		margin-bottom: 15px;
+	}
+	li.li-1 {
+		background-color: rgba(0, 0, 0, 0.37);
+		border: 1px solid rgba(0, 0, 0, 0.37);;
+	}
+	li.li-2{
+		background-color: rgb(255, 255, 255);
+		border: 1px solid #aaa;
+	}
+	li.li-3{
+		background-color: rgb(0, 0, 0);
+		border: 1px solid rgb(0, 0, 0);
+	}
+	li.li-4{
+		background-color: rgb(52, 61, 70);
+		border: 1px solid rgb(52, 61, 70);
+	}
+	li.li-5{
+		background-color: rgb(192, 192, 192);
+		border: 1px solid rgb(192, 192, 192);
+	}
+	li.li-6{
+		background-color: rgb(110, 127, 128); 
+		border: 1px solid rgb(110, 127, 128); 
+	}
+	li.li-7{
+		background-color: rgb(110, 127, 128); 
+		border: 1px solid rgb(110, 127, 128); 
+	}
+	li.li-8 {
+		background-color: rgb(104, 104, 107); 
+		border: 1px solid rgb(104, 104, 107); 
+	}
+	li.li-9 {
+		background-color: rgb(255, 203, 211);
+		border: 1px solid rgb(255, 203, 211);
+	}
+	li.li-10 {
+		background-color: rgb(128, 0, 128);
+		border: 1px solid rgb(128, 0, 128);
+	}
+	li.li-11 {
+		background-color: rgb(252, 237, 208);
+		border: 1px solid rgb(252, 237, 208);
+	}
+	li.li-12 {
+		background-color: rgb(98, 74, 46);
+		border: 1px solid rgb(98, 74, 46);
+	}
+	li.li-13 {
+		background-color: rgb(236, 198, 193);
+		border: 1px solid rgb(236, 198, 193);
+	}
+	@media screen and (min-width: 320px) and (max-width: 420px){
+		.wrap-category-desktop{
+			width: 100%;
+		}
+		.desk-main-category .wrap-category-desktop{
+			display: flex;
+			flex-direction: column;
+		}
+		.desk-display-product{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.desk-sort-category{
+			width: 100%;
+			padding-left: 20px;
+		}
+		.desk-display-product .desk-product{
+
+			margin: 0 auto;
+		}
+
+		
+	}
+	@media screen and (min-width: 421px) and (max-width: 640px){
+		.wrap-category-desktop{
+			width: 100%;
+		}
+		.desk-main-category .wrap-category-desktop{
+			display: flex;
+			flex-direction: column;
+		}
+		.desk-display-product{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.desk-sort-category{
+			width: 100%;
+			padding-left: 20px;
+		}
+		.desk-display-product .desk-product{
+			width: calc(100% /2);
+		}
+	}
+	@media screen and (min-width: 641px) and (max-width: 768px){
+		.wrap-category-desktop{
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.desk-display-product{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.desk-sort-category{
+			width: 30%;
+			padding-left: 10px;
+		}
+		.desk-display-product .desk-product{
+			width: calc(100% /2);
+		}
+	}
+	@media screen and (min-width: 769px) and (max-width: 990px){
+		.wrap-category-desktop{
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.desk-display-product{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.desk-sort-category{
+			width: 30%;
+			padding-left: 10px;
+		}
+		.wrap-category-desktop .desk-product{
+			width: calc(100% / 3);
+		}
+	}
+	@media screen and (min-width: 991px) and (max-width: 1280px){
+		.wrap-category-desktop{
+			width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.desk-display-product{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.wrap-category-desktop .desk-product{
+			width: calc(100% / 4);
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		.wrap-category-desktop .desk-related-product{
+			text-align: center;
+		}
+	}
+</style>
+<body>
+        <div class="desk-break-crumbs flex items-center">
+                <div class="wrap-category-desktop flex justify-between">
+                    <span>
+                        <a href=""> Home</a> &rsaquo;
+                        <a href=""> Category</a>
+                    </span>
+                    <div class="desk-sort-layout">
+                        <i class="fa fa-th-list" aria-hidden="true"></i>
+                        <select name="" id="">
+                            <option value="">Best match</option>
+                            <option value="">Price: Low to high</option>
+                            <option value="">Price: Hight to low</option>
+                            <option value="">Title: A -> Z</option>
+                            <option value="">Title: Z -> A</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        <!-- main category-->
+        <div class="desk-main-category">
+            <div class="wrap-category-desktop">
+            <div class="desk-sort-category">
+                <div class="desk-wrapper-sort">
+                    <div class="desk-sort-drop">
+                        <b>Famous Branch</b>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <a class="desk-item-sort" href="">Apple</a>
+                    <a class="desk-item-sort" href="">Samsung</a>
+                    <a class="desk-item-sort" href="">Asus</a>
+                    <a class="desk-item-sort desk-item-private bold-character color-char-black" href="">Others</a>
+                </div>
+                <div class="desk-wrapper-sort">
+                    <div class="desk-sort-drop">
+                        <b>Type</b>
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <a class="desk-item-sort desk-item-private bold-character color-char-black" href="">Sale</a>
+                    <a class="desk-item-sort" href="">Buy</a>
+                    <a class="desk-item-sort" href="">Exchange</a>
+                </div>
+                <div class="desk-wrapper-sort">
+                    <div class="desk-sort-drop">
+                        <b>Tablet</b>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <a class="desk-item-sort desk-item-private bold-character color-char-black" href="">All</a>
+                    <a class="desk-item-sort" href="">Apple</a>
+                    <a class="desk-item-sort" href="">Samsung</a>
+                    <a class="desk-item-sort" href="">Asus</a>
+                    <a class="desk-item-sort" href="">Oppo</a>
+                    <a class="desk-item-sort" href="">HTC</a>
+                    <a class="desk-item-sort" href="">Sony</a>
+                    <a class="desk-item-sort" href="">Hawei</a>
+                    <a class="desk-item-sort" href="">BlackBerry</a>
+                    <a class="desk-item-sort" href="">LG</a>
+                </div>
+                <div class="desk-wrapper-sort">
+                    <div class="desk-sort-drop">
+                        <b>Smartphone</b>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <a class="desk-item-sort desk-item-private bold-character color-char-black" href="">All</a>
+                    <a class="desk-item-sort" href="">Apple</a>
+                    <a class="desk-item-sort" href="">Samsung</a>
+                    <a class="desk-item-sort" href="">Asus</a>
+                    <a class="desk-item-sort" href="">Oppo</a>
+                    <a class="desk-item-sort" href="">HTC</a>
+                    <a class="desk-item-sort" href="">Sony</a>
+                    <a class="desk-item-sort" href="">Hawei</a>
+                    <a class="desk-item-sort" href="">BlackBerry</a>
+                    <a class="desk-item-sort" href="">LG</a>
+                </div>
+                <div class="desk-wrapper-sort">
+                    <div class="desk-sort-drop">
+                        <b>Smartwatch</b>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <a class="desk-item-sort desk-item-private bold-character color-char-black" href="">All</a>
+                    <a class="desk-item-sort" href="">Apple</a>
+                    <a class="desk-item-sort" href="">Samsung</a>
+                    <a class="desk-item-sort" href="">Asus</a>
+                    <a class="desk-item-sort" href="">Oppo</a>
+                    <a class="desk-item-sort" href="">HTC</a>
+                    <a class="desk-item-sort" href="">Sony</a>
+                    <a class="desk-item-sort" href="">Hawei</a>
+                    <a class="desk-item-sort" href="">BlackBerry</a>
+                    <a class="desk-item-sort" href="">LG</a>
+                </div>
+                <div class="desk-wrapper-sort">
+                    <div class="desk-sort-drop">
+                        <b>Condition</b>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div id='slider'></div>
+                </div>
+                <div class="desk-wrapper-sort">
+                    <div class="desk-sort-drop">
+                        <b>Price</b>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div id='slider-st'></div>
+                    
+                </div>
+                <div class="desk-wrapper-sort">
+                    <div class="desk-sort-drop">
+                        <b>color</b>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="li-color">
+                                <ul>
+                                    <li class="li-1"></li>
+                                    <li class="li-2" ></li>
+                                    <li class="li-3" ></li>
+                                    <li class="li-4" ></li>
+                                    <li class="li-5" ></li>
+                                    <li class="li-6" ></li>
+                                    <li class="li-7" ></li>
+                                    <li class="li-8" ></li>
+                                    <li class="li-9" ></li>
+                                    <li class="li-10" ></li>
+                                    <li class="li-11" ></li>
+                                    <li class="li-12" ></li>
+                                    <li class="li-13" ></li>
+                                </ul>
+                            </div>
+                    
+                </div>
+            </div>
+                <div class="desk-display-product">
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category ">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search" ></i>
+                                <i class="fa fa-compress" ></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-category">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search"></i>
+                                <i class="fa fa-compress"></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-category">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>

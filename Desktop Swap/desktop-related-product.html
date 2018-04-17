@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+	*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .mbs-container{
+		width: 1285px;
+		margin: 0 auto;
+	}
+	.mbs-related-product{
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-bottom: 50px;
+	}
+	.mbs-related-product .mbs-product{
+		width: 257px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.mbs-related-product .mbs-product .mbs-img-related{
+		padding-top: 30px;
+		position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+	.mbs-related-product .mbs-product .mbs-img-related img {
+		width: 200px;
+		height: 230px;
+	}
+	.mbs-related-product .mbs-product .mbs-img-related .mbs-compare-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+	}
+	.mbs-related-product .mbs-product .mbs-img-related .mbs-compare-icon i{
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		margin-top: 2px;
+	}
+	.mbs-product .mbs-info-related{
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+        justify-content: flex-start;
+	}
+	.mbs-product .mbs-info-related a{
+	 	text-transform: uppercase;
+	 	font-family: 'Raleway', sans-serif;
+	 	font-weight: 700;
+	 	font-size: 14px;
+	 	text-decoration: none;
+	 	color: #000;
+	}
+	.mbs-product .mbs-info-related a:hover{
+		color: #ff9800;
+	}
+	.mbs-product .mbs-info-related span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.mbs-evaluate{
+		display: flex;
+		flex-direction: row;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.mbs-product .mbs-info-related button{
+		margin-top: 40px;
+		border: none;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+	.mbs-evaluate i{
+		color: #FF9800;
+	}
+	.control-navigation {
+		display: flex;
+		flex-direction: row;
+		padding-left: 20px;
+		height: 50px;
+        justify-content: space-between;
+	}
+	.control-navigation p{
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		margin-top: 20px;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+	}
+	@media screen and (min-width: 320px) and (max-width: 640px){
+		.mbs-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		.mbs-container .control-navigation{
+			width: 100%;
+		}
+		.mbs-container .mbs-product{
+			width: calc(100% / 2);
+		}
+	}
+	@media screen and (min-width: 641px) and (max-width: 768px){
+		.mbs-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		.mbs-container .mbs-product{
+			width: calc(100% / 2);
+		}
+	}
+	@media screen and (min-width: 769px) and (max-width: 960px){
+		.mbs-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		.mbs-container .mbs-product{
+			width: calc(100% / 3);
+		}
+	}
+	@media screen and (min-width: 961px) and (max-width: 1280px){
+		.mbs-container{
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		.mbs-container .mbs-product{
+			width: calc(100% / 4);
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		.mbs-container .mbs-related-product{
+			text-align: center;
+		}
+	}
+</style>
+<body>
+        <div class="mbs-container control-navigation">
+                <p>related product</p>
+            </div>
+            <div class=" mbs-container mbs-related-product">
+                <div class="mbs-product">
+                    <div class="mbs-img-related">
+                        <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                        <div class="mbs-compare-icon">
+                            <i class="fa fa-search" aria-hiden="true"></i>
+                            <i class="fa fa-compress" aria-hiden="true"></i>
+                        </div>
+                    </div>
+                    <div class="mbs-info-related ">
+                        <a href="">STAINLESS Steels</a>
+                        <div class="mbs-evaluate">
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hiden="true"></i>
+                        </div>
+                        <span>Sale: $1889</span>
+                        <button>Buy</button>
+                    </div>
+                </div>
+        
+                <div class="mbs-product">
+                    <div class="mbs-img-related">
+                        <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                        <div class="mbs-compare-icon">
+                            <i class="fa fa-search" aria-hiden="true"></i>
+                            <i class="fa fa-compress" aria-hiden="true"></i>
+                        </div>
+                    </div>
+                    <div class="mbs-info-related ">
+                        <a href="">STAINLESS Steels</a>
+                        <div class="mbs-evaluate">
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hiden="true"></i>
+                        </div>
+                        <span>Sale: $1889</span>
+                        <button>Buy</button>
+                    </div>
+                </div>
+                <div class="mbs-product">
+                    <div class="mbs-img-related">
+                        <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                        <div class="mbs-compare-icon">
+                            <i class="fa fa-search" aria-hiden="true"></i>
+                            <i class="fa fa-compress" aria-hiden="true"></i>
+                        </div>
+                    </div>
+                    <div class="mbs-info-related">
+                        <a href="">STAINLESS Steels</a>
+                        <div class="mbs-evaluate">
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hiden="true"></i>
+                        </div>
+                        <span>Sale: $1889</span>
+                        <button>Buy</button>
+                    </div>
+                </div>
+                <div class="mbs-product">
+                    <div class="mbs-img-related">
+                        <img  src="http://demo.swap-ez.com:1004/products/59a6402dbaf4d41984acc4a6_1.jpg">
+                        <div class="mbs-compare-icon">
+                            <i class="fa fa-search" aria-hiden="true"></i>
+                            <i class="fa fa-compress" aria-hiden="true"></i>
+                        </div>
+                    </div>
+                    <div class="mbs-info-related">
+                        <a href="">STAINLESS Steels</a>
+                        <div class="mbs-evaluate">
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hiden="true"></i>
+                        </div>
+                        <span>Sale: $1889</span>
+                        <button>Buy</button>
+                    </div>
+                </div>
+                <div class="mbs-product">
+                    <div class="mbs-img-related">
+                        <img  src="http://demo.swap-ez.com:1004/products/59a63e9cbaf4d41984acc4a0_1.jpg">
+                        <div class="mbs-compare-icon">
+                            <i class="fa fa-search" aria-hiden="true"></i>
+                            <i class="fa fa-compress" aria-hiden="true"></i>
+                        </div>
+                    </div>
+                    <div class="mbs-info-related">
+                        <a href="">STAINLESS Steels</a>
+                        <div class="mbs-evaluate">
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star" aria-hiden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hiden="true"></i>
+                        </div>
+                        <span>Sale: $1889</span>
+                        <button>Buy</button>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+</head>
+<style>
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    .desk-container-viewcart{
+		width: 100%;
+		height: auto;
+		padding-top: 120px;
+		background-color: #eee;
+		padding-bottom: 100px;
+	}
+	.desk-viewcart{
+		width: 1050px;
+		height: auto;
+		margin: 0 auto;
+		background-color: #fff;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 50px;
+	}
+	table{
+		width: 1000px;
+		margin: 0 auto;
+		vertical-align: middle;
+		margin-top: 10px;
+	}
+	table th  {
+		font-family:'Raleway',sans-serif;
+		text-transform: uppercase;
+		padding: 10px;
+		font-weight: 700;
+		color: #000;
+		text-align: left;
+        font-size: 14px;
+	}
+    table tr{
+        border-bottom: 1px solid #eee;
+    }
+	table tr td {
+		font-family:'Raleway',sans-serif;
+		width: 50px;
+		font-size: 12px;
+		color: #000;
+		padding: 5px;
+	}
+	table tr td img {
+		width: 65px;
+    	height: 100px;
+	}
+	table tr td a{
+		color: #000;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+	.desk-display-col{
+		height: auto;
+	}
+	.bold-character{
+		font-weight: bold;
+	}
+	.border-gray{
+		border: 1px solid #aaa;
+	}
+	.txt-center{
+		text-align: center;
+	}
+	.txt-left{
+		text-align: left;
+	}
+	.desk-width-long{ 
+		width: 130px;
+	}
+	.desk-name-product{
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: 600;
+        display: inline-block;
+        padding-bottom: 15px;
+	}
+	.desk-attribute-child{
+		color: #666;
+		font-size: 12px;
+	}
+	.hover-yellow:hover{
+		color: #ff9800;
+	}
+	.color-yellow{
+		color: #ff9800;
+	}
+	.desk-total{
+		margin-top: 50px;
+		width: 100%;
+		height:80px;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 20px;
+	}
+	.desk-total-1st{
+		width: 50%;
+		height: 100%;
+	}
+	.desk-total-2st{
+		width: 50%;
+		height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+	}
+	.desk-total-2st span{
+		font-weight: 700;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+	}
+	.desk-total-2st button{
+		height: 30px;
+		width: 100px;
+		color: #fff;
+		background-color: #000;
+		border: none;
+	}
+	.desk-total-2st button:hover{
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #000;
+	}
+	.desk-comment-product{
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-bottom: 50px;
+		
+	}
+	.desk-comment-product .desk-product{
+		width: 200px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.desk-comment-product .desk-product .desk-img-comment{
+		padding-top: 30px;
+		position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+	}
+	.desk-comment-product .desk-product .desk-img-comment img {
+		width: 180px;
+		height: 200px;
+	}
+	.desk-comment-product .desk-product .desk-img-comment .desk-compare-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+	}
+	.desk-comment-product .desk-product .desk-img-comment .desk-compare-icon i{
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		margin-top: 2px;
+	}
+	.desk-product .desk-info-comment{
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+        justify-content: flex-start;
+	}
+	.desk-product .desk-info-comment a{
+	 	text-transform: uppercase;
+	 	font-family: 'Raleway', sans-serif;
+	 	font-weight: 700;
+	 	font-size: 14px;
+	 	text-decoration: none;
+	 	color: #000;
+	}
+	.desk-product .desk-info-comment a:hover{
+		color: #ff9800;
+	}
+	.desk-product .desk-info-comment span{
+		font-family: 'Raleway', sans-serif;
+		font-size: 12px;
+	}
+	.desk-evaluate{
+		display: flex;
+		flex-direction: row;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.desk-product .desk-info-comment button{
+		margin-top: 40px;
+		border: none;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+	.desk-evaluate i{
+		color: #FF9800;
+	}
+	.control-navigation {
+		display: flex;
+		flex-direction: row;
+		padding-left: 20px;
+		height: 50px;
+        justify-content: space-between;
+	}
+	.control-navigation p{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		margin-top: 20px;
+		padding-left: 10px;
+		border-left: 2px solid #ff9800;
+	}
+	@media screen and (min-width: 320px) and (max-width: 640px){
+		.desk-viewcart{
+			width: 100%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.desk-viewcart .control-navigation{
+			width: 100%;
+		}
+		.desk-viewcart .desk-product{
+			width: calc(100% / 2);
+		}
+		.product-in-cart{
+			overflow: auto;
+		}
+	}
+	@media screen and (min-width: 641px) and (max-width: 768px){
+		.desk-viewcart{
+			width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.product-in-cart{
+			overflow: auto;
+		}
+		.desk-viewcart .desk-product{
+			width: calc(100% / 2);
+		}
+	}
+	@media screen and (min-width: 769px) and (max-width: 960px){
+		.desk-viewcart{
+			width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.desk-viewcart .desk-product{
+			width: calc(100% / 3);
+		}
+		.product-in-cart{
+			overflow: auto;
+		}
+	}
+	@media screen and (min-width: 961px) and (max-width: 1280px){
+		.desk-viewcart{
+			width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.desk-viewcart .desk-product{
+			width: calc(100% / 4);
+		}
+		.product-in-cart{
+			overflow: auto;
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		
+	}
+    .td-contain-img{
+        text-align: center;
+    }
+    .td-contain-img img {
+        display: inline-block;
+    }
+</style>
+<body>
+        <div class="desk-container-viewcart">
+                <div class="desk-viewcart">
+                    <div class="product-in-cart">
+                        <table >
+                            <tr>
+                                <th></th>
+                                <th class="desk-width-long txt-left">Item in your bag</th>
+                                <th class="txt-center">type </th>
+                                <th class="txt-center">price </th>
+                                <th class="txt-center">status</th>
+                                <th class="txt-center">proposal</th>
+                            </tr>
+                            <tr>
+                                
+                                    <td class="td-contain-img">
+                                        <img src="http://www.imei.info/media/t/gsm-cache/r/0/8bxYzk-d.jpg" alt="">
+                                    </td>
+                                    <div class="desk-wrapper-viewcart">
+                                        <td class="desk-display-col">
+                                            <a class="desk-name-product">ASUS Zenfone 3... - 8GB</a><br/>
+                                            <span class="desk-attribute-child">Brand: Asus</span><br/>
+                                            <span class="desk-attribute-child">Color : Black</span><br/>
+                                            <span class="desk-attribute-child">Capacity :32GB</span><br/>
+                                            <a class="hover-yellow" href=""> Remove</a>
+                                        </td>
+                                            <td class="txt-center desk-attribute-child" >Sale</td>
+                                            <td class="txt-center desk-attribute-child">$5000</td>
+                                            <td class="txt-center desk-attribute-child">Not Verified</td>
+                                        <td class="txt-center"><a class="color-yellow" href="">Create</a></td>
+                                    </div>
+                            </tr>
+                            <tr>
+                                <td class="td-contain-img">
+                                    <img class ="txt-center" src="http://www.imei.info/media/t/gsm-cache/r/0/8bxYzk-d.jpg" alt="">
+                                </td>
+                                <div class="desk-wrapper-viewcart">
+                                    <td class="desk-display-col">
+                                        <a class="desk-name-product">ASUS Zenfone 3... - 8GB</a><br/>
+                                        <span class="desk-attribute-child">Brand: Asus</span><br/>
+                                        <span class="desk-attribute-child">Color : Black</span><br/>
+                                        <span class="desk-attribute-child">Capacity :32GB</span><br/>
+                                        <a class="hover-yellow" href=""> Remove</a>
+                                    </td>
+                                    <td class="txt-center desk-attribute-child">Sale</td>
+                                    <td class="txt-center desk-attribute-child">$5000</td>
+                                    <td class="txt-center desk-attribute-child">Not Verified</td>
+                                    <td class="txt-center desk-attribute-child hover-yellow"><a class="color-yellow" href="">Create</a></td>
+                                </div>
+                            </tr>
+                        </table>
+                        <div class="desk-total">
+                                <div class="desk-total-1st"></div>
+                                <div class="desk-total-2st">
+                                    <span class="">Total: $499</span>
+                                    <button class="">Check out</button>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="desk-container control-navigation">
+                        <p >Recommended for You</p>
+                    </div>
+                    <div class=" desk-container desk-comment-product">
+                    <div class="desk-product">
+                        <div class="desk-img-comment">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search" ></i>
+                                <i class="fa fa-compress" ></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-comment">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+            
+                    <div class="desk-product">
+                        <div class="desk-img-comment">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search" ></i>
+                                <i class="fa fa-compress" ></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-comment">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-comment">
+                            <img  src="http://i.ebayimg.com/images/g/~RIAAOSwA3dYWf7O/s-l1600.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search" ></i>
+                                <i class="fa fa-compress" ></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-comment">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-comment ">
+                            <img  src="http://demo.swap-ez.com:1004/products/59a6402dbaf4d41984acc4a6_1.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search" ></i>
+                                <i class="fa fa-compress" ></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-comment">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                    <div class="desk-product">
+                        <div class="desk-img-comment ">
+                            <img  src="http://demo.swap-ez.com:1004/products/59a63e9cbaf4d41984acc4a0_1.jpg">
+                            <div class="desk-compare-icon">
+                                <i class="fa fa-search" ></i>
+                                <i class="fa fa-compress" ></i>
+                            </div>
+                        </div>
+                        <div class="desk-info-comment">
+                            <a href="">STAINLESS Steels</a>
+                            <div class="desk-evaluate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>Sale: $1889</span>
+                            <!-- <span>Exchange : $1889</span> -->
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>
