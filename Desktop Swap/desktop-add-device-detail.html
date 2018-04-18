@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +9,450 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,500i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="./Fork-Awesome-1.0.11/Fork-Awesome-1.0.11/css/fork-awesome.min.css">
     <link rel="stylesheet" href="./fontawesome-free-5.0.8/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./noUiSlider.11.0.3/nouislider.min.css">
 </head>
 <style>
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: Roboto, Helvetica, Arial, sans-serif;
     }
-    .add-device-wrapper{
+    
+    .add-device-wrapper {
         width: 100%;
-        height: 600px;
+        height: 1000px;
         background-color: #eee;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .add-device-frame{
+    
+    .add-device-frame {
         width: 1050px;
-        height: 300px;
+        height: auto;
         background-color: #fff;
         padding: 40px 30px;
         display: flex;
         flex-direction: column;
+        /* margin: 0 auto; */
+    }
+    .add-device-row{
+        width: 100%;
+        height: 570px;
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+    }
+    .add-device-left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+    }
+    .add-device-right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    p.fill-input {
+        text-transform: uppercase;
+        color: #212121;
+        padding-left: 10px;
+        border-left: 3px solid #ff9800;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    
+    .input-series {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 40px;
+        align-items: center;
+    }
+    
+    .select-input-series {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .label-for-input,
+    .select-label-for-input {
+        width: 15%;
+        height: 100%;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 100%;
+        color: #212121;
+        padding-top: 7px;
+        font-size: 13px;
+        
+    }
+    .label-for-input i {
+        background-color: #ff9800;
+        padding: 4px 6px;
+        color: #fff;
+        font-size: 8px;
+        border-radius: 50%;
+    }
+    
+    .input-field,
+    .select-input-field {
+        width: 85%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .input-field input[type="text"] {
+        width: 100%;
+        height: 40px;
+        margin-left: 15px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0, 0, 0, 0.1)!important;
+        padding-left: 30px;
+        font-size: 14px;
+        border: none;
+    }
+    
+    .select-input-field select {
+        width: 100%;
+        height: 40px;
+        margin-left: 15px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0, 0, 0, 0.1)!important;
+        padding-left: 30px;
+        font-size: 14px;
+        border: none;
+        background-color: #eee;
+    }
+    
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+    
+    .input-field i {
+        position: absolute;
+        top: 13px;
+        left: 21px;
+        color: #aaa;
+        font-size: 17px;
+    }
+    .title-add-device{
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+    }
+    .title-add-device i {
+        color: #FF9800;
+        font-size: 10px;
+    }
+    .title-add-device span{
+        font-size: 12px;
+        color: #212121;
+        font-weight: 500;
+    }
+    .noUi-connect{
+	background-color:  #ff9800 !important;
+    }
+    .noUi-target{
+        width: 95% !important;
+        height: 5px !important;
+    }
+    .noUi-handle{
+        border-radius: 50% !important;
+        background-color: #ff9800 !important;
+        box-shadow:  0 0 0 !important;
+    }
+    .noUi-horizontal .noUi-handle{
+        width: 15px !important;
+        height: 15px !important;
+        top: -7px !important;
+        left: -8px;
+    }
+    .noUi-handle:before, .noUi-handle:after{
+        content: "";
+        display: block;
+        position: absolute;
+        height: 0;
+        width: 0;
+        background: #E8E7E6;
+        left: 0;
+        top: 0;
+    }
+    .noUi-connect{
+        box-shadow:  0 0 0 !important;
+    }
+    .add-device-slider{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .add-device-choose-price{
+        width: 100%;
+        height: 45PX;
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        margin-bottom: 35px;
+    }
+    .add-device-choose-price .input-rela input{
+        width: 100%;
+        height: 40px;
+        padding-left: 30px;
+
+    }
+    .add-device-choose-price select {
+        width: 50%;
+        height: 40px;
+        padding-left: 20px;
+    }
+    .input-rela{
+        width: 50%;
+        position: relative;
+    }
+    .input-rela i {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        color: #aaa;
+    }
+    .input-rela input {
+        font-size: 14px;
+    }
+    .choose-attribute{
+        width: 100%;
+        height: 100px;
+        border: 1px solid #eee;
+        padding: 15px;
+    }
+    .choose-attribute span{
+        padding: 7px;
+        background-color: #ccc;
+        font-size: 12px;
+        /* border-radius: 7px; */
+    }
+    .description-product{
+        padding: 10px 20px 10px 20px;
+        
+    }
+    .description-product span{
+        font-size: 14px;
+        color: #212121;
+        font-weight: 500;
+       
+    }
+    .description-product textarea{
+        margin-top: 10px;
+        width: 100%;
+        height: 100px;
+        border: none;
+        border: 1px solid #eee;
+    }
+    .description-product button{
+        width: 100%;
+        height: 80px;
+        border : none;
+        border: 1px solid #eee;
+        background: transparent;
+        margin-top: 10px;
+
+    }
+    .button-action{
+        margin-top: 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+    .button-action button{
+        width: 80px;
+        height: 35px;
+        border: none;
+        margin-right: 20px;
+    }
+    .button-action button:nth-child(1){
+        background-color: #eee;
+    }
+    .button-action button:nth-child(1):hover{
+        background-color: #ddd;
+    }
+    .button-action button:nth-child(2){
+        background-color: #000;
+        color: #fff;
+    }
+    .button-action button:nth-child(2):hover{
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
     }
 </style>
+
 <body>
     <div class="add-device-wrapper">
         <div class="add-device-frame">
-            <div class="add-device-left"></div>
+            <div class="add-device-row">
+            <div class="add-device-left">
+                <p class="fill-input"> PLEASE FILL IN THE FORM TO ADD YOUR DEVICES</p>
+                <div class="input-series">
+                    <div class="label-for-input"> Imei/Serial number&nbsp<i class="fas fa-info"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="123563256325" disabled="true">
+                        <i class="fa fa-commenting" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="select-input-series">
+                    <div class="select-label-for-input"> Color</div>
+                    <div class="select-input-field">
+                        <select name="" id="">
+                            <option value=""> Oppo</option>
+                            <option value="">Sam sung</option>
+                            <option value=""> Hawei</option>
+                        </select>
+                    </div>
+                </div>
 
+                <div class="select-input-series">
+                    <div class="select-label-for-input"> Category</div>
+                    <div class="select-input-field">
+                        <select name="" id="">
+                            <option value=""> Oppo</option>
+                            <option value="">Sam sung</option>
+                            <option value=""> Hawei</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-input-series">
+                    <div class="select-label-for-input"> Brand</div>
+                    <div class="select-input-field">
+                        <select name="" id="">
+                            <option value=""> Oppo</option>
+                            <option value="">Sam sung</option>
+                            <option value=""> Hawei</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-input-series">
+                    <div class="select-label-for-input"> Model</div>
+                    <div class="select-input-field">
+                        <select name="" id="">
+                            <option value=""> Oppo</option>
+                            <option value="">Sam sung</option>
+                            <option value=""> Hawei</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-input-series">
+                    <div class="select-label-for-input"> Capacity</div>
+                    <div class="select-input-field">
+                        <select name="" id="">
+                            <option value=""> Oppo</option>
+                            <option value="">Sam sung</option>
+                            <option value=""> Hawei</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+
+                </div>
+                <div class="add-device-right">
+                    <div class="title-add-device">
+                        <i class="fas fa-circle"></i>&nbsp
+                        <span>Condition. All devices listed for sale on Swap-ez marketplace must meet our Criteria for Sale.</span>
+                    </div>
+
+                    <div id="slider-condition" class="add-device-slider"></div>
+
+
+                    <div class="title-add-device">
+                        <i class="fas fa-circle"></i>&nbsp
+                        <span>Add price here and currency in here. It will make more atractive for your device</span>
+                    </div>
+                    <div class="add-device-choose-price">
+                        <div class="input-rela">
+                            <input type="text">
+                            <i class="fa fa-commenting" aria-hidden="true"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">USD</option>
+                            <option value="">VND</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="title-add-device">
+                        <i class="fas fa-circle"></i>&nbsp
+                        <span>Put attribute info on your device: accessories, guarantee.</span>
+                    </div>
+
+                    <div class="add-device-choose-price">
+                        
+                        <select name="" id="">
+                            <option value="">Attribute</option>
+                            <option value="">Attribute</option>
+                        </select>
+                        <select name="" id="">
+                                <option value="">Value</option>
+                                <option value="">Value</option>
+                        </select>
+                    </div>
+                    <div class="choose-attribute">
+                            <span>Guarantee:  months &nbsp<i class="fa fa-times" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="description-product">
+                <span>Description</span>
+                <textarea></textarea>
+            </div>
+
+            <div class="description-product">
+                <span> Upload </span>
+                <button></button>
+            </div>
+
+
+
+            <div class="button-action">
+                    <button> Cancel </button>
+                    <button> Submit </button>
+                </div>
         </div>
     </div>
+</div>
 </body>
-<script></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="./noUiSlider.11.0.3/nouislider.min.js"> </script>
+<script>
+    var condition_slider = document.getElementById('slider-condition');
+    
+    noUiSlider.create(condition_slider, {
+        start: [ 50, 100 ],
+        limit: 100,
+        behaviour: 'drag',
+        connect: true,
+        range: {
+            'min': 50,
+            'max': 100
+        }
+    });
+</script>
+
 </html>
